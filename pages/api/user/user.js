@@ -98,6 +98,23 @@ export default async function (req, res) {
             return res.status(500).send("Could not DELETE user: " + error.message);
         }
       }
-      
-  
+  if(req.method==="GET")
+      {
+        await cors(req, res)
+        try
+        {
+          const {pid} = req.query;
+          let id=Number(pid);
+          let getuser = await DataUser.getUser(id);
+          if (getuser===-1)
+            {
+              throw new Error("The user name does not exists");
+             }
+            return res.status(200).send(getuser);
+            
+            }
+            catch (error) {
+                return res.status(500).send(error.message);
+            }
+    }
 }

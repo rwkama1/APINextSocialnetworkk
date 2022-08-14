@@ -2,5 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/user/loginuser": "pages/api/user/loginuser.js"
+  "/api/user/getusersbydateentry": "pages/api/user/getusersbydateentry.js"
 }
