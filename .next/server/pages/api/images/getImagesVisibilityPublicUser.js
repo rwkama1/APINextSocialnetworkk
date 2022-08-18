@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/user/getusersbydateentry";
-exports.ids = ["pages/api/user/getusersbydateentry"];
+exports.id = "pages/api/images/getImagesVisibilityPublicUser";
+exports.ids = ["pages/api/images/getImagesVisibilityPublicUser"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataUser":
-/*!***********************************************!*\
-  !*** external "socialnetworkk/data/DataUser" ***!
-  \***********************************************/
+/***/ "socialnetworkk/data/DataPhoto":
+/*!************************************************!*\
+  !*** external "socialnetworkk/data/DataPhoto" ***!
+  \************************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataUser");
+module.exports = require("socialnetworkk/data/DataPhoto");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/user/getusersbydateentry.js":
-/*!***********************************************!*\
-  !*** ./pages/api/user/getusersbydateentry.js ***!
-  \***********************************************/
+/***/ "(api)/./pages/api/images/getImagesVisibilityPublicUser.js":
+/*!***********************************************************!*\
+  !*** ./pages/api/images/getImagesVisibilityPublicUser.js ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataUser */ \"socialnetworkk/data/DataUser\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__);\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { pdate1 , pdate2  } = req.query;\n            let getUsersbyBirthDate = await socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__.DataUser.getUsersbyDateEntry(pdate1, pdate2);\n            return res.status(200).send(getUsersbyBirthDate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9nZXR1c2Vyc2J5ZGF0ZWVudHJ5LmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBMkI7QUFDNkI7QUFHeEQsNkJBQWUsMENBQWdCRSxHQUFHLEVBQUVDLEdBQUcsRUFDdkM7SUFDSSxJQUFHRCxHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ3JCO1FBQ0UsTUFBTUosaURBQUksQ0FBQ0UsR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNFLE1BQU0sRUFBQ0UsTUFBTSxHQUFDQyxNQUFNLEdBQUMsR0FBR0osR0FBRyxDQUFDSyxLQUFLO1lBQ2pDLElBQUlDLG1CQUFtQixHQUFHLE1BQU1QLHNGQUE0QixDQUMzREksTUFBTSxFQUFDQyxNQUFNLENBQUM7WUFFYixPQUFPSCxHQUFHLENBQUNPLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDSCxtQkFBbUIsQ0FBQyxDQUFDO1NBRXBELENBQ0QsT0FBT0ksS0FBSyxFQUFFO1lBQ04sT0FBT1QsR0FBRyxDQUFDTyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUMvQztLQUNQO0NBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS91c2VyL2dldHVzZXJzYnlkYXRlZW50cnkuanM/MWJlYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgY29ycyBmcm9tIFwiLi4vY29yc1wiO1xyXG5pbXBvcnQgeyBEYXRhVXNlciB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFVc2VyXCI7XHJcblxyXG5cclxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKHJlcSwgcmVzKSBcclxue1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICB7XHJcbiAgICAgIGF3YWl0IGNvcnMocmVxLCByZXMpXHJcbiAgICAgIHRyeVxyXG4gICAgICB7XHJcbiAgICAgICAgY29uc3Qge3BkYXRlMSxwZGF0ZTJ9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIGxldCBnZXRVc2Vyc2J5QmlydGhEYXRlID0gYXdhaXQgRGF0YVVzZXIuZ2V0VXNlcnNieURhdGVFbnRyeShcclxuICAgICAgICAgcGRhdGUxLHBkYXRlMik7XHJcblxyXG4gICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGdldFVzZXJzYnlCaXJ0aERhdGUpO1xyXG4gICAgICAgICAgXHJcbiAgICAgIH1cclxuICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICB9XHJcbiAgfVxyXG59Il0sIm5hbWVzIjpbImNvcnMiLCJEYXRhVXNlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsInBkYXRlMSIsInBkYXRlMiIsInF1ZXJ5IiwiZ2V0VXNlcnNieUJpcnRoRGF0ZSIsImdldFVzZXJzYnlEYXRlRW50cnkiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/getusersbydateentry.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPhoto */ \"socialnetworkk/data/DataPhoto\");\n/* harmony import */ var socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            let arraydiffdate = [];\n            const { piduser  } = req.query;\n            let iduser = Number(piduser);\n            let array = await socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__.DataPhoto.getImagesVisibilityPublicUser(iduser);\n            for (const image of array){\n                image.DiffDatePublishDateNow();\n                image.showDiffDatePublishDateNow();\n                arraydiffdate.push(image);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvaW1hZ2VzL2dldEltYWdlc1Zpc2liaWxpdHlQdWJsaWNVc2VyLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBMEQ7QUFDL0I7QUFFM0IsNkJBQWUsMENBQWdCRSxHQUFHLEVBQUVDLEdBQUcsRUFBRTtJQUNyQyxJQUFHRCxHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ2pCO1FBQ0UsTUFBTUgsaURBQUksQ0FBQ0MsR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNFLElBQUlFLGFBQWEsR0FBQyxFQUFFO1lBQ3BCLE1BQU0sRUFBQ0MsT0FBTyxHQUFDLEdBQUdKLEdBQUcsQ0FBQ0ssS0FBSztZQUMzQixJQUFJQyxNQUFNLEdBQUNDLE1BQU0sQ0FBQ0gsT0FBTyxDQUFDO1lBQzFCLElBQUlJLEtBQUssR0FBQyxNQUFNVixrR0FBdUMsQ0FBQ1EsTUFBTSxDQUFDO1lBQy9ELEtBQUssTUFBTUksS0FBSyxJQUFJRixLQUFLLENBQUU7Z0JBQ3ZCRSxLQUFLLENBQUNDLHNCQUFzQixFQUFFO2dCQUM5QkQsS0FBSyxDQUFDRSwwQkFBMEIsRUFBRTtnQkFDbENULGFBQWEsQ0FBQ1UsSUFBSSxDQUFDSCxLQUFLLENBQUMsQ0FBQzthQUM3QjtZQUNELE9BQU9ULEdBQUcsQ0FBQ2EsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNaLGFBQWEsQ0FBQyxDQUFDO1NBRTNDLENBQ0osT0FBT2EsS0FBSyxFQUFFO1lBQ0osT0FBT2YsR0FBRyxDQUFDYSxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUNoRDtLQUNOO0NBRUYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS9pbWFnZXMvZ2V0SW1hZ2VzVmlzaWJpbGl0eVB1YmxpY1VzZXIuanM/MmNkYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEYXRhUGhvdG8gfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhUGhvdG9cIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICAgIHRyeVxyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBsZXQgYXJyYXlkaWZmZGF0ZT1bXTtcclxuICAgICAgICAgICAgY29uc3Qge3BpZHVzZXJ9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgICAgICBsZXQgaWR1c2VyPU51bWJlcihwaWR1c2VyKTtcclxuICAgICAgICAgICAgbGV0IGFycmF5PWF3YWl0IERhdGFQaG90by5nZXRJbWFnZXNWaXNpYmlsaXR5UHVibGljVXNlcihpZHVzZXIpO1xyXG4gICAgICAgICAgICBmb3IgKGNvbnN0IGltYWdlIG9mIGFycmF5KSB7XHJcbiAgICAgICAgICAgICAgICBpbWFnZS5EaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICAgIGltYWdlLnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICAgIGFycmF5ZGlmZmRhdGUucHVzaChpbWFnZSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGFycmF5ZGlmZmRhdGUpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFQaG90byIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJhcnJheWRpZmZkYXRlIiwicGlkdXNlciIsInF1ZXJ5IiwiaWR1c2VyIiwiTnVtYmVyIiwiYXJyYXkiLCJnZXRJbWFnZXNWaXNpYmlsaXR5UHVibGljVXNlciIsImltYWdlIiwiRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93IiwicHVzaCIsInN0YXR1cyIsInNlbmQiLCJlcnJvciIsIm1lc3NhZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/images/getImagesVisibilityPublicUser.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/getusersbydateentry.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/images/getImagesVisibilityPublicUser.js"));
 module.exports = __webpack_exports__;
 
 })();

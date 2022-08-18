@@ -10,13 +10,12 @@ export default async function (req, res)
       try
       {
       
-        let getUsers = await DataUser.getUsers();
-
+          let getUsers = await DataUser.getUsers();
           return res.status(200).send(getUsers);
           
       }
       catch (error) {
               return res.status(500).send(error.message);
          }
-  }
+     }
 }

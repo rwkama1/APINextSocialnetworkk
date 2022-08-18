@@ -10,10 +10,10 @@ export default async function (req, res)
       try
       {
         const {pdate1,pdate2} = req.query;
-        let getUsersbyBirthDate = await DataUser.getUsersbyDateEntry(
+        let getUsersbyDateEntry = await DataUser.getUsersbyDateEntry(
          pdate1,pdate2);
 
-          return res.status(200).send(getUsersbyBirthDate);
+          return res.status(200).send(getUsersbyDateEntry);
           
       }
       catch (error) {
