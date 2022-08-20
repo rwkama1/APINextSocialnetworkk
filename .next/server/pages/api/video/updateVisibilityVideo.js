@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/images/getImagesVisibilityPublicUser";
-exports.ids = ["pages/api/images/getImagesVisibilityPublicUser"];
+exports.id = "pages/api/video/updateVisibilityVideo";
+exports.ids = ["pages/api/video/updateVisibilityVideo"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,23 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataPhoto":
+/***/ "socialnetworkk/data/DataVideo":
 /*!************************************************!*\
-  !*** external "socialnetworkk/data/DataPhoto" ***!
+  !*** external "socialnetworkk/data/DataVideo" ***!
   \************************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataPhoto");
+module.exports = require("socialnetworkk/data/DataVideo");
+
+/***/ }),
+
+/***/ "socialnetworkk/entity/DTOVideo":
+/*!*************************************************!*\
+  !*** external "socialnetworkk/entity/DTOVideo" ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = require("socialnetworkk/entity/DTOVideo");
 
 /***/ }),
 
@@ -53,13 +63,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/images/getImagesVisibilityPublicUser.js":
-/*!***********************************************************!*\
-  !*** ./pages/api/images/getImagesVisibilityPublicUser.js ***!
-  \***********************************************************/
+/***/ "(api)/./pages/api/video/updateVisibilityVideo.js":
+/*!**************************************************!*\
+  !*** ./pages/api/video/updateVisibilityVideo.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPhoto */ \"socialnetworkk/data/DataPhoto\");\n/* harmony import */ var socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            let arraydiffdate = [];\n            const { piduser  } = req.query;\n            let iduser = Number(piduser);\n            let array = await socialnetworkk_data_DataPhoto__WEBPACK_IMPORTED_MODULE_0__.DataPhoto.getImagesVisibilityPublicUser(iduser);\n            for (const image of array){\n                image.DiffDatePublishDateNow();\n                image.showDiffDatePublishDateNow();\n                arraydiffdate.push(image);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvaW1hZ2VzL2dldEltYWdlc1Zpc2liaWxpdHlQdWJsaWNVc2VyLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBMEQ7QUFDL0I7QUFFM0IsNkJBQWUsMENBQWdCRSxHQUFHLEVBQUVDLEdBQUcsRUFBRTtJQUNyQyxJQUFHRCxHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ2pCO1FBQ0UsTUFBTUgsaURBQUksQ0FBQ0MsR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNFLElBQUlFLGFBQWEsR0FBQyxFQUFFO1lBQ3BCLE1BQU0sRUFBQ0MsT0FBTyxHQUFDLEdBQUdKLEdBQUcsQ0FBQ0ssS0FBSztZQUMzQixJQUFJQyxNQUFNLEdBQUNDLE1BQU0sQ0FBQ0gsT0FBTyxDQUFDO1lBQzFCLElBQUlJLEtBQUssR0FBQyxNQUFNVixrR0FBdUMsQ0FBQ1EsTUFBTSxDQUFDO1lBQy9ELEtBQUssTUFBTUksS0FBSyxJQUFJRixLQUFLLENBQUU7Z0JBQ3ZCRSxLQUFLLENBQUNDLHNCQUFzQixFQUFFO2dCQUM5QkQsS0FBSyxDQUFDRSwwQkFBMEIsRUFBRTtnQkFDbENULGFBQWEsQ0FBQ1UsSUFBSSxDQUFDSCxLQUFLLENBQUMsQ0FBQzthQUM3QjtZQUNELE9BQU9ULEdBQUcsQ0FBQ2EsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNaLGFBQWEsQ0FBQyxDQUFDO1NBRTNDLENBQ0osT0FBT2EsS0FBSyxFQUFFO1lBQ0osT0FBT2YsR0FBRyxDQUFDYSxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUNoRDtLQUNOO0NBRUYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS9pbWFnZXMvZ2V0SW1hZ2VzVmlzaWJpbGl0eVB1YmxpY1VzZXIuanM/MmNkYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEYXRhUGhvdG8gfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhUGhvdG9cIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICAgIHRyeVxyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBsZXQgYXJyYXlkaWZmZGF0ZT1bXTtcclxuICAgICAgICAgICAgY29uc3Qge3BpZHVzZXJ9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgICAgICBsZXQgaWR1c2VyPU51bWJlcihwaWR1c2VyKTtcclxuICAgICAgICAgICAgbGV0IGFycmF5PWF3YWl0IERhdGFQaG90by5nZXRJbWFnZXNWaXNpYmlsaXR5UHVibGljVXNlcihpZHVzZXIpO1xyXG4gICAgICAgICAgICBmb3IgKGNvbnN0IGltYWdlIG9mIGFycmF5KSB7XHJcbiAgICAgICAgICAgICAgICBpbWFnZS5EaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICAgIGltYWdlLnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICAgIGFycmF5ZGlmZmRhdGUucHVzaChpbWFnZSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGFycmF5ZGlmZmRhdGUpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFQaG90byIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJhcnJheWRpZmZkYXRlIiwicGlkdXNlciIsInF1ZXJ5IiwiaWR1c2VyIiwiTnVtYmVyIiwiYXJyYXkiLCJnZXRJbWFnZXNWaXNpYmlsaXR5UHVibGljVXNlciIsImltYWdlIiwiRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93IiwicHVzaCIsInN0YXR1cyIsInNlbmQiLCJlcnJvciIsIm1lc3NhZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/images/getImagesVisibilityPublicUser.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataVideo */ \"socialnetworkk/data/DataVideo\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! socialnetworkk/entity/DTOVideo */ \"socialnetworkk/entity/DTOVideo\");\n/* harmony import */ var socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"OPTIONS\") {\n        try {\n            return res.status(200).send(\"OK\");\n        } catch (error) {\n            return res.status(500).send(\"OPTION ERROR \" + error.message);\n        }\n    }\n    if (req.method === \"PUT\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idvideo , visibility  } = req.body;\n            let updateVisibilityVideo = await socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__.DataVideo.updateVisibilityVideo(idvideo, visibility);\n            if (updateVisibilityVideo === -1) {\n                throw new Error(\"The video does not exists\");\n            }\n            return res.status(200).send(\"The visibility was updated successfully\");\n        } catch (error1) {\n            return res.status(500).send(error1.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdmlkZW8vdXBkYXRlVmlzaWJpbGl0eVZpZGVvLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUEyQjtBQUMrQjtBQUNBO0FBRzFELDZCQUFlLDBDQUFnQkcsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFFdkMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsU0FBUyxFQUN6QjtRQUNFLElBQ0E7WUFDSSxPQUFPRCxHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLElBQUksQ0FBQztTQUNwQyxDQUNELE9BQU9DLEtBQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMsZUFBZSxHQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQzVEO0tBQ0Y7SUFDRCxJQUFHTixHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ3JCO1FBQ0UsTUFBTUwsaURBQUksQ0FBQ0csR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNJLE1BQU0sRUFBQ00sT0FBTyxHQUFDQyxVQUFVLEdBQUMsR0FBR1IsR0FBRyxDQUFDUyxJQUFJO1lBQ3JDLElBQUlDLHFCQUFxQixHQUFHLE1BQU1aLDBGQUErQixDQUNoRVMsT0FBTyxFQUFDQyxVQUFVLENBQUM7WUFDcEIsSUFBSUUscUJBQXFCLEtBQUcsQ0FBQyxDQUFDLEVBQUU7Z0JBQzVCLE1BQU0sSUFBSUMsS0FBSyxDQUFDLDJCQUEyQixDQUFDLENBQUM7YUFDNUM7WUFFTCxPQUFPVixHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLHlDQUF5QyxDQUFDLENBQUM7U0FDMUUsQ0FDRCxPQUFPQyxNQUFLLEVBQUU7WUFDWixPQUFPSixHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDQyxNQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBRTVDO0tBQ0Y7Q0FHRiIsInNvdXJjZXMiOlsid2VicGFjazovL2FwaW5leHRzb2NpYWxuZXR3b3JrLy4vcGFnZXMvYXBpL3ZpZGVvL3VwZGF0ZVZpc2liaWxpdHlWaWRlby5qcz83MWRkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjb3JzIGZyb20gXCIuLi9jb3JzXCI7XHJcbmltcG9ydCB7IERhdGFWaWRlbyB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFWaWRlb1wiO1xyXG5pbXBvcnQgeyBEVE9WaWRlbyB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9lbnRpdHkvRFRPVmlkZW9cIjtcclxuXHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAocmVxLCByZXMpIHtcclxuXHJcbiAgaWYocmVxLm1ldGhvZD09PVwiT1BUSU9OU1wiKVxyXG4gIHtcclxuICAgIHRyeVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIk9LXCIpXHJcbiAgICB9XHJcbiAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKFwiT1BUSU9OIEVSUk9SIFwiK2Vycm9yLm1lc3NhZ2UpO1xyXG4gICAgfVxyXG4gIH1cclxuICBpZihyZXEubWV0aG9kPT09XCJQVVRcIilcclxuICB7XHJcbiAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgdHJ5XHJcbiAgICB7XHJcbiAgICAgICAgY29uc3Qge2lkdmlkZW8sdmlzaWJpbGl0eX0gPSByZXEuYm9keTtcclxuICAgICAgICBsZXQgdXBkYXRlVmlzaWJpbGl0eVZpZGVvID0gYXdhaXQgRGF0YVZpZGVvLnVwZGF0ZVZpc2liaWxpdHlWaWRlb1xyXG4gICAgICAgIChpZHZpZGVvLHZpc2liaWxpdHkpO1xyXG4gICAgICAgIGlmICh1cGRhdGVWaXNpYmlsaXR5VmlkZW89PT0tMSkge1xyXG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoXCJUaGUgdmlkZW8gZG9lcyBub3QgZXhpc3RzXCIpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIlRoZSB2aXNpYmlsaXR5IHdhcyB1cGRhdGVkIHN1Y2Nlc3NmdWxseVwiKTsgICBcclxuICAgIH1cclxuICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLnNlbmQoZXJyb3IubWVzc2FnZSk7ICAgIFxyXG4gICAgICBcclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiBcclxufSJdLCJuYW1lcyI6WyJjb3JzIiwiRGF0YVZpZGVvIiwiRFRPVmlkZW8iLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIiwiaWR2aWRlbyIsInZpc2liaWxpdHkiLCJib2R5IiwidXBkYXRlVmlzaWJpbGl0eVZpZGVvIiwiRXJyb3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/video/updateVisibilityVideo.js\n");
 
 /***/ })
 
@@ -70,7 +80,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/images/getImagesVisibilityPublicUser.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/video/updateVisibilityVideo.js"));
 module.exports = __webpack_exports__;
 
 })();

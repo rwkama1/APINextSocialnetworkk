@@ -39,7 +39,7 @@ export default async function (req, res) {
         return res.status(200).send("The image was added successfully");   
     }
     catch (error) {
-      return res.status(500).send("Could not add user: "+error.message);    
+      return res.status(500).send(error.message);    
       
     }
   }
