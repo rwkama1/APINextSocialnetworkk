@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/video/getVideosMainPage";
-exports.ids = ["pages/api/video/getVideosMainPage"];
+exports.id = "pages/api/postvideoimage/getPhotoPostVideoCountryUser";
+exports.ids = ["pages/api/postvideoimage/getPhotoPostVideoCountryUser"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataVideo":
-/*!************************************************!*\
-  !*** external "socialnetworkk/data/DataVideo" ***!
-  \************************************************/
+/***/ "socialnetworkk/data/DataPhotoPostVideo":
+/*!*********************************************************!*\
+  !*** external "socialnetworkk/data/DataPhotoPostVideo" ***!
+  \*********************************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataVideo");
+module.exports = require("socialnetworkk/data/DataPhotoPostVideo");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/video/getVideosMainPage.js":
-/*!**********************************************!*\
-  !*** ./pages/api/video/getVideosMainPage.js ***!
-  \**********************************************/
+/***/ "(api)/./pages/api/postvideoimage/getPhotoPostVideoCountryUser.js":
+/*!******************************************************************!*\
+  !*** ./pages/api/postvideoimage/getPhotoPostVideoCountryUser.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataVideo */ \"socialnetworkk/data/DataVideo\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            let arraydiffdate = [];\n            const { iduserlogin , country  } = req.query;\n            let array = await socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__.DataVideo.getVideosMainPage(iduserlogin, country);\n            for (const vid of array){\n                vid.DiffDatePublishDateNow();\n                vid.showDiffDatePublishDateNow();\n                arraydiffdate.push(vid);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdmlkZW8vZ2V0VmlkZW9zTWFpblBhZ2UuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUEwRDtBQUMvQjtBQUUzQiw2QkFBZSwwQ0FBZ0JFLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ3JDLElBQUdELEdBQUcsQ0FBQ0UsTUFBTSxLQUFHLEtBQUssRUFDakI7UUFDRSxNQUFNSCxpREFBSSxDQUFDQyxHQUFHLEVBQUVDLEdBQUcsQ0FBQztRQUNwQixJQUNBO1lBQ0UsSUFBSUUsYUFBYSxHQUFDLEVBQUU7WUFDcEIsTUFBTSxFQUFDQyxXQUFXLEdBQUNDLE9BQU8sR0FBQyxHQUFHTCxHQUFHLENBQUNNLEtBQUs7WUFFOUMsSUFBSUMsS0FBSyxHQUFDLE1BQU1ULHNGQUEyQixDQUFDTSxXQUFXLEVBQUNDLE9BQU8sQ0FBQztZQUM3RCxLQUFLLE1BQU1JLEdBQUcsSUFBSUYsS0FBSyxDQUFFO2dCQUNyQkUsR0FBRyxDQUFDQyxzQkFBc0IsRUFBRTtnQkFDNUJELEdBQUcsQ0FBQ0UsMEJBQTBCLEVBQUU7Z0JBQ2hDUixhQUFhLENBQUNTLElBQUksQ0FBQ0gsR0FBRyxDQUFDLENBQUM7YUFDM0I7WUFDRyxPQUFPUixHQUFHLENBQUNZLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDWCxhQUFhLENBQUMsQ0FBQztTQUUzQyxDQUNKLE9BQU9ZLEtBQUssRUFBRTtZQUNKLE9BQU9kLEdBQUcsQ0FBQ1ksTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNDLEtBQUssQ0FBQ0MsT0FBTyxDQUFDLENBQUM7U0FDaEQ7S0FDTjtDQUVGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9wYWdlcy9hcGkvdmlkZW8vZ2V0VmlkZW9zTWFpblBhZ2UuanM/YmY5NyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEYXRhVmlkZW8gfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhVmlkZW9cIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICAgIHRyeVxyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBsZXQgYXJyYXlkaWZmZGF0ZT1bXTtcclxuICAgICAgICAgICAgY29uc3Qge2lkdXNlcmxvZ2luLGNvdW50cnl9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIFxyXG4gICAgIGxldCBhcnJheT1hd2FpdCBEYXRhVmlkZW8uZ2V0VmlkZW9zTWFpblBhZ2UoaWR1c2VybG9naW4sY291bnRyeSlcclxuICAgICAgICBmb3IgKGNvbnN0IHZpZCBvZiBhcnJheSkge1xyXG4gICAgICAgICAgICB2aWQuRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdygpXHJcbiAgICAgICAgICAgIHZpZC5zaG93RGlmZkRhdGVQdWJsaXNoRGF0ZU5vdygpXHJcbiAgICAgICAgICAgIGFycmF5ZGlmZmRhdGUucHVzaCh2aWQpO1xyXG4gICAgICAgIH1cclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGFycmF5ZGlmZmRhdGUpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFWaWRlbyIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJhcnJheWRpZmZkYXRlIiwiaWR1c2VybG9naW4iLCJjb3VudHJ5IiwicXVlcnkiLCJhcnJheSIsImdldFZpZGVvc01haW5QYWdlIiwidmlkIiwiRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93IiwicHVzaCIsInN0YXR1cyIsInNlbmQiLCJlcnJvciIsIm1lc3NhZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/video/getVideosMainPage.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPhotoPostVideo */ \"socialnetworkk/data/DataPhotoPostVideo\");\n/* harmony import */ var socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            let arraydiffdate = [];\n            const { country  } = req.query;\n            let array = await socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__.DataPhotoPostVideo.getPhotoPostVideoCountryUser(country);\n            for (const post of array){\n                post.DiffDatePublishDateNow();\n                post.showDiffDatePublishDateNow();\n                arraydiffdate.push(post);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcG9zdHZpZGVvaW1hZ2UvZ2V0UGhvdG9Qb3N0VmlkZW9Db3VudHJ5VXNlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQTRFO0FBQ2pEO0FBRTNCLDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFDckMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsS0FBSyxFQUNqQjtRQUNFLE1BQU1ILGlEQUFJLENBQUNDLEdBQUcsRUFBRUMsR0FBRyxDQUFDO1FBQ3BCLElBQ0E7WUFDRSxJQUFJRSxhQUFhLEdBQUMsRUFBRTtZQUNwQixNQUFNLEVBQUNDLE9BQU8sR0FBQyxHQUFHSixHQUFHLENBQUNLLEtBQUs7WUFFM0IsSUFBSUMsS0FBSyxHQUFDLE1BQU1SLG1IQUErQyxDQUM5RE0sT0FBTyxDQUFDO1lBQ1QsS0FBSyxNQUFNSSxJQUFJLElBQUlGLEtBQUssQ0FBRTtnQkFDdEJFLElBQUksQ0FBQ0Msc0JBQXNCLEVBQUU7Z0JBQzdCRCxJQUFJLENBQUNFLDBCQUEwQixFQUFFO2dCQUNqQ1AsYUFBYSxDQUFDUSxJQUFJLENBQUNILElBQUksQ0FBQyxDQUFDO2FBQzVCO1lBQ0QsT0FBT1AsR0FBRyxDQUFDVyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ1YsYUFBYSxDQUFDLENBQUM7U0FFM0MsQ0FDSixPQUFPVyxLQUFLLEVBQUU7WUFDSixPQUFPYixHQUFHLENBQUNXLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQ2hEO0tBQ047Q0FFRiIsInNvdXJjZXMiOlsid2VicGFjazovL2FwaW5leHRzb2NpYWxuZXR3b3JrLy4vcGFnZXMvYXBpL3Bvc3R2aWRlb2ltYWdlL2dldFBob3RvUG9zdFZpZGVvQ291bnRyeVVzZXIuanM/ZDUzYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEYXRhUGhvdG9Qb3N0VmlkZW8gfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhUGhvdG9Qb3N0VmlkZW9cIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICAgIHRyeVxyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBsZXQgYXJyYXlkaWZmZGF0ZT1bXTtcclxuICAgICAgICAgICAgY29uc3Qge2NvdW50cnl9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIFxyXG4gICAgICAgICAgICBsZXQgYXJyYXk9YXdhaXQgRGF0YVBob3RvUG9zdFZpZGVvLmdldFBob3RvUG9zdFZpZGVvQ291bnRyeVVzZXJcclxuICAgICAgICAgICAgKGNvdW50cnkpXHJcbiAgICAgICAgICAgIGZvciAoY29uc3QgcG9zdCBvZiBhcnJheSkge1xyXG4gICAgICAgICAgICAgICAgcG9zdC5EaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICAgIHBvc3Quc2hvd0RpZmZEYXRlUHVibGlzaERhdGVOb3coKVxyXG4gICAgICAgICAgICAgICAgYXJyYXlkaWZmZGF0ZS5wdXNoKHBvc3QpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChhcnJheWRpZmZkYXRlKTtcclxuICAgICAgICAgICAgICBcclxuICAgICAgICAgICB9XHJcbiAgICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDUwMCkuc2VuZChlcnJvci5tZXNzYWdlKTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICB9XHJcblxyXG4gICAgfSJdLCJuYW1lcyI6WyJEYXRhUGhvdG9Qb3N0VmlkZW8iLCJjb3JzIiwicmVxIiwicmVzIiwibWV0aG9kIiwiYXJyYXlkaWZmZGF0ZSIsImNvdW50cnkiLCJxdWVyeSIsImFycmF5IiwiZ2V0UGhvdG9Qb3N0VmlkZW9Db3VudHJ5VXNlciIsInBvc3QiLCJEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93Iiwic2hvd0RpZmZEYXRlUHVibGlzaERhdGVOb3ciLCJwdXNoIiwic3RhdHVzIiwic2VuZCIsImVycm9yIiwibWVzc2FnZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/postvideoimage/getPhotoPostVideoCountryUser.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/video/getVideosMainPage.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/postvideoimage/getPhotoPostVideoCountryUser.js"));
 module.exports = __webpack_exports__;
 
 })();

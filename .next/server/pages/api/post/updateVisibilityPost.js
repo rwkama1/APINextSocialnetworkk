@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/video/updateVisibilityVideo";
-exports.ids = ["pages/api/video/updateVisibilityVideo"];
+exports.id = "pages/api/post/updateVisibilityPost";
+exports.ids = ["pages/api/post/updateVisibilityPost"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,23 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataVideo":
-/*!************************************************!*\
-  !*** external "socialnetworkk/data/DataVideo" ***!
-  \************************************************/
+/***/ "socialnetworkk/data/DataPost":
+/*!***********************************************!*\
+  !*** external "socialnetworkk/data/DataPost" ***!
+  \***********************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataVideo");
-
-/***/ }),
-
-/***/ "socialnetworkk/entity/DTOVideo":
-/*!*************************************************!*\
-  !*** external "socialnetworkk/entity/DTOVideo" ***!
-  \*************************************************/
-/***/ ((module) => {
-
-module.exports = require("socialnetworkk/entity/DTOVideo");
+module.exports = require("socialnetworkk/data/DataPost");
 
 /***/ }),
 
@@ -63,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/video/updateVisibilityVideo.js":
-/*!**************************************************!*\
-  !*** ./pages/api/video/updateVisibilityVideo.js ***!
-  \**************************************************/
+/***/ "(api)/./pages/api/post/updateVisibilityPost.js":
+/*!************************************************!*\
+  !*** ./pages/api/post/updateVisibilityPost.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataVideo */ \"socialnetworkk/data/DataVideo\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! socialnetworkk/entity/DTOVideo */ \"socialnetworkk/entity/DTOVideo\");\n/* harmony import */ var socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_entity_DTOVideo__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"OPTIONS\") {\n        try {\n            return res.status(200).send(\"OK\");\n        } catch (error) {\n            return res.status(500).send(\"OPTION ERROR \" + error.message);\n        }\n    }\n    if (req.method === \"PUT\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idvideo , visibility  } = req.body;\n            let updateVisibilityVideo = await socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_1__.DataVideo.updateVisibilityVideo(idvideo, visibility);\n            if (updateVisibilityVideo === -1) {\n                throw new Error(\"The video does not exists\");\n            }\n            return res.status(200).send(\"The visibility was updated successfully\");\n        } catch (error1) {\n            return res.status(500).send(error1.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdmlkZW8vdXBkYXRlVmlzaWJpbGl0eVZpZGVvLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUEyQjtBQUMrQjtBQUNBO0FBRzFELDZCQUFlLDBDQUFnQkcsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFFdkMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsU0FBUyxFQUN6QjtRQUNFLElBQ0E7WUFDSSxPQUFPRCxHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLElBQUksQ0FBQztTQUNwQyxDQUNELE9BQU9DLEtBQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMsZUFBZSxHQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQzVEO0tBQ0Y7SUFDRCxJQUFHTixHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ3JCO1FBQ0UsTUFBTUwsaURBQUksQ0FBQ0csR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNJLE1BQU0sRUFBQ00sT0FBTyxHQUFDQyxVQUFVLEdBQUMsR0FBR1IsR0FBRyxDQUFDUyxJQUFJO1lBQ3JDLElBQUlDLHFCQUFxQixHQUFHLE1BQU1aLDBGQUErQixDQUNoRVMsT0FBTyxFQUFDQyxVQUFVLENBQUM7WUFDcEIsSUFBSUUscUJBQXFCLEtBQUcsQ0FBQyxDQUFDLEVBQUU7Z0JBQzVCLE1BQU0sSUFBSUMsS0FBSyxDQUFDLDJCQUEyQixDQUFDLENBQUM7YUFDNUM7WUFFTCxPQUFPVixHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLHlDQUF5QyxDQUFDLENBQUM7U0FDMUUsQ0FDRCxPQUFPQyxNQUFLLEVBQUU7WUFDWixPQUFPSixHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDQyxNQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBRTVDO0tBQ0Y7Q0FHRiIsInNvdXJjZXMiOlsid2VicGFjazovL2FwaW5leHRzb2NpYWxuZXR3b3JrLy4vcGFnZXMvYXBpL3ZpZGVvL3VwZGF0ZVZpc2liaWxpdHlWaWRlby5qcz83MWRkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjb3JzIGZyb20gXCIuLi9jb3JzXCI7XHJcbmltcG9ydCB7IERhdGFWaWRlbyB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFWaWRlb1wiO1xyXG5pbXBvcnQgeyBEVE9WaWRlbyB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9lbnRpdHkvRFRPVmlkZW9cIjtcclxuXHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAocmVxLCByZXMpIHtcclxuXHJcbiAgaWYocmVxLm1ldGhvZD09PVwiT1BUSU9OU1wiKVxyXG4gIHtcclxuICAgIHRyeVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIk9LXCIpXHJcbiAgICB9XHJcbiAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKFwiT1BUSU9OIEVSUk9SIFwiK2Vycm9yLm1lc3NhZ2UpO1xyXG4gICAgfVxyXG4gIH1cclxuICBpZihyZXEubWV0aG9kPT09XCJQVVRcIilcclxuICB7XHJcbiAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgdHJ5XHJcbiAgICB7XHJcbiAgICAgICAgY29uc3Qge2lkdmlkZW8sdmlzaWJpbGl0eX0gPSByZXEuYm9keTtcclxuICAgICAgICBsZXQgdXBkYXRlVmlzaWJpbGl0eVZpZGVvID0gYXdhaXQgRGF0YVZpZGVvLnVwZGF0ZVZpc2liaWxpdHlWaWRlb1xyXG4gICAgICAgIChpZHZpZGVvLHZpc2liaWxpdHkpO1xyXG4gICAgICAgIGlmICh1cGRhdGVWaXNpYmlsaXR5VmlkZW89PT0tMSkge1xyXG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoXCJUaGUgdmlkZW8gZG9lcyBub3QgZXhpc3RzXCIpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIlRoZSB2aXNpYmlsaXR5IHdhcyB1cGRhdGVkIHN1Y2Nlc3NmdWxseVwiKTsgICBcclxuICAgIH1cclxuICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLnNlbmQoZXJyb3IubWVzc2FnZSk7ICAgIFxyXG4gICAgICBcclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiBcclxufSJdLCJuYW1lcyI6WyJjb3JzIiwiRGF0YVZpZGVvIiwiRFRPVmlkZW8iLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIiwiaWR2aWRlbyIsInZpc2liaWxpdHkiLCJib2R5IiwidXBkYXRlVmlzaWJpbGl0eVZpZGVvIiwiRXJyb3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/video/updateVisibilityVideo.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPost */ \"socialnetworkk/data/DataPost\");\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"OPTIONS\") {\n        try {\n            return res.status(200).send(\"OK\");\n        } catch (error) {\n            return res.status(500).send(\"OPTION ERROR \" + error.message);\n        }\n    }\n    if (req.method === \"PUT\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            const { idpost , visibility  } = req.body;\n            let updateVisibilityPost = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__.DataPost.updateVisibilityPost(idpost, visibility);\n            if (updateVisibilityPost === -1) {\n                throw new Error(\"The Post does not exists\");\n            }\n            return res.status(200).send(\"The visibility was updated successfully\");\n        } catch (error1) {\n            return res.status(500).send(error1.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcG9zdC91cGRhdGVWaXNpYmlsaXR5UG9zdC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQXdEO0FBQzdCO0FBRTNCLDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFFckMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsU0FBUyxFQUN6QjtRQUNFLElBQ0E7WUFDSSxPQUFPRCxHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLElBQUksQ0FBQztTQUNwQyxDQUNELE9BQU9DLEtBQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMsZUFBZSxHQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQzVEO0tBQ0Y7SUFDRCxJQUFHTixHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ3JCO1FBQ0UsTUFBTUgsaURBQUksQ0FBQ0MsR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNFLE1BQU0sRUFBQ00sTUFBTSxHQUFDQyxVQUFVLEdBQUMsR0FBR1IsR0FBRyxDQUFDUyxJQUFJO1lBR3BDLElBQUlDLG9CQUFvQixHQUFHLE1BQU1aLHVGQUE2QixDQUFDUyxNQUFNLEVBQUNDLFVBQVUsQ0FBQztZQUNqRixJQUFJRSxvQkFBb0IsS0FBRyxDQUFDLENBQUMsRUFBRTtnQkFDM0IsTUFBTSxJQUFJQyxLQUFLLENBQUMsMEJBQTBCLENBQUMsQ0FBQzthQUMvQztZQUVDLE9BQU9WLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMseUNBQXlDLENBQUMsQ0FBQztTQUMxRSxDQUNELE9BQU9DLE1BQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNDLE1BQUssQ0FBQ0MsT0FBTyxDQUFDLENBQUM7U0FFNUM7S0FDRjtDQUVGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9wYWdlcy9hcGkvcG9zdC91cGRhdGVWaXNpYmlsaXR5UG9zdC5qcz82NjE1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IERhdGFQb3N0IH0gZnJvbSBcInNvY2lhbG5ldHdvcmtrL2RhdGEvRGF0YVBvc3RcIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG5cclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIk9QVElPTlNcIilcclxuICAgIHtcclxuICAgICAgdHJ5XHJcbiAgICAgIHtcclxuICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIk9LXCIpXHJcbiAgICAgIH1cclxuICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKFwiT1BUSU9OIEVSUk9SIFwiK2Vycm9yLm1lc3NhZ2UpO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgICBpZihyZXEubWV0aG9kPT09XCJQVVRcIilcclxuICAgIHtcclxuICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgdHJ5XHJcbiAgICAgIHtcclxuICAgICAgICBjb25zdCB7aWRwb3N0LHZpc2liaWxpdHl9ID0gcmVxLmJvZHk7XHJcbiAgICAgICAgICAgIFxyXG4gICAgICAgXHJcbiAgICAgICAgbGV0IHVwZGF0ZVZpc2liaWxpdHlQb3N0ID0gYXdhaXQgRGF0YVBvc3QudXBkYXRlVmlzaWJpbGl0eVBvc3QoaWRwb3N0LHZpc2liaWxpdHkpO1xyXG4gICAgICAgIGlmICh1cGRhdGVWaXNpYmlsaXR5UG9zdD09PS0xKSB7XHJcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihcIlRoZSBQb3N0IGRvZXMgbm90IGV4aXN0c1wiKTtcclxuICAgICAgICB9XHJcbiBcclxuICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIlRoZSB2aXNpYmlsaXR5IHdhcyB1cGRhdGVkIHN1Y2Nlc3NmdWxseVwiKTsgICBcclxuICAgICAgfVxyXG4gICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLnNlbmQoZXJyb3IubWVzc2FnZSk7ICAgIFxyXG4gICAgICAgIFxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgXHJcbiAgfSJdLCJuYW1lcyI6WyJEYXRhUG9zdCIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIiwiaWRwb3N0IiwidmlzaWJpbGl0eSIsImJvZHkiLCJ1cGRhdGVWaXNpYmlsaXR5UG9zdCIsIkVycm9yIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/post/updateVisibilityPost.js\n");
 
 /***/ })
 
@@ -80,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/video/updateVisibilityVideo.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/post/updateVisibilityPost.js"));
 module.exports = __webpack_exports__;
 
 })();

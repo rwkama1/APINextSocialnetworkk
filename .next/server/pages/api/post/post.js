@@ -1,0 +1,86 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/api/post/post";
+exports.ids = ["pages/api/post/post"];
+exports.modules = {
+
+/***/ "cors":
+/*!***********************!*\
+  !*** external "cors" ***!
+  \***********************/
+/***/ ((module) => {
+
+module.exports = require("cors");
+
+/***/ }),
+
+/***/ "socialnetworkk/data/DataPost":
+/*!***********************************************!*\
+  !*** external "socialnetworkk/data/DataPost" ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = require("socialnetworkk/data/DataPost");
+
+/***/ }),
+
+/***/ "socialnetworkk/entity/DTOPost":
+/*!************************************************!*\
+  !*** external "socialnetworkk/entity/DTOPost" ***!
+  \************************************************/
+/***/ ((module) => {
+
+module.exports = require("socialnetworkk/entity/DTOPost");
+
+/***/ }),
+
+/***/ "(api)/./lib/init-middleware.js":
+/*!********************************!*\
+  !*** ./lib/init-middleware.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMiddleware)\n/* harmony export */ });\n// Helper method to wait for a middleware to execute before continuing\n// And to throw an error when an error happens in a middleware\nfunction initMiddleware(middleware) {\n    return (req, res)=>new Promise((resolve, reject)=>{\n            middleware(req, res, (result)=>{\n                if (result instanceof Error) {\n                    return reject(result);\n                }\n                return resolve(result);\n            });\n        });\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvaW5pdC1taWRkbGV3YXJlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBQSxzRUFBc0U7QUFDdEUsOERBQThEO0FBQy9DLFNBQVNBLGNBQWMsQ0FBQ0MsVUFBVSxFQUFFO0lBQ2pELE9BQU8sQ0FBQ0MsR0FBRyxFQUFFQyxHQUFHLEdBQ2QsSUFBSUMsT0FBTyxDQUFDLENBQUNDLE9BQU8sRUFBRUMsTUFBTSxHQUFLO1lBQy9CTCxVQUFVLENBQUNDLEdBQUcsRUFBRUMsR0FBRyxFQUFFLENBQUNJLE1BQU0sR0FBSztnQkFDL0IsSUFBSUEsTUFBTSxZQUFZQyxLQUFLLEVBQUU7b0JBQzNCLE9BQU9GLE1BQU0sQ0FBQ0MsTUFBTSxDQUFDO2lCQUN0QjtnQkFDRCxPQUFPRixPQUFPLENBQUNFLE1BQU0sQ0FBQzthQUN2QixDQUFDO1NBQ0gsQ0FBQztDQUNMIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9saWIvaW5pdC1taWRkbGV3YXJlLmpzP2FjZWMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gSGVscGVyIG1ldGhvZCB0byB3YWl0IGZvciBhIG1pZGRsZXdhcmUgdG8gZXhlY3V0ZSBiZWZvcmUgY29udGludWluZ1xuLy8gQW5kIHRvIHRocm93IGFuIGVycm9yIHdoZW4gYW4gZXJyb3IgaGFwcGVucyBpbiBhIG1pZGRsZXdhcmVcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGluaXRNaWRkbGV3YXJlKG1pZGRsZXdhcmUpIHtcbiAgcmV0dXJuIChyZXEsIHJlcykgPT5cbiAgICBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgICBtaWRkbGV3YXJlKHJlcSwgcmVzLCAocmVzdWx0KSA9PiB7XG4gICAgICAgIGlmIChyZXN1bHQgaW5zdGFuY2VvZiBFcnJvcikge1xuICAgICAgICAgIHJldHVybiByZWplY3QocmVzdWx0KVxuICAgICAgICB9XG4gICAgICAgIHJldHVybiByZXNvbHZlKHJlc3VsdClcbiAgICAgIH0pXG4gICAgfSlcbn1cbiJdLCJuYW1lcyI6WyJpbml0TWlkZGxld2FyZSIsIm1pZGRsZXdhcmUiLCJyZXEiLCJyZXMiLCJQcm9taXNlIiwicmVzb2x2ZSIsInJlamVjdCIsInJlc3VsdCIsIkVycm9yIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./lib/init-middleware.js\n");
+
+/***/ }),
+
+/***/ "(api)/./pages/api/cors.js":
+/*!***************************!*\
+  !*** ./pages/api/cors.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cors */ \"cors\");\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cors__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_init_middleware__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/init-middleware */ \"(api)/./lib/init-middleware.js\");\n\n\n// Initialize the cors middleware\nconst cors = (0,_lib_init_middleware__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options\ncors__WEBPACK_IMPORTED_MODULE_0___default()({\n    // Only allow requests with GET, POST,PUT,DELETE and OPTIONS\n    methods: [\n        \"GET\",\n        \"POST\",\n        \"PUT\",\n        \"DELETE\",\n        \"OPTIONS\"\n    ]\n}));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cors);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvY29ycy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQXVCO0FBQytCO0FBSXRELGlDQUFpQztBQUNqQyxNQUFNRSxJQUFJLEdBQUdELGdFQUFjLENBQ3pCLDhHQUE4RztBQUM5R0QsMkNBQUksQ0FBQztJQUNILDREQUE0RDtJQUM1REcsT0FBTyxFQUFFO1FBQUMsS0FBSztRQUFFLE1BQU07UUFBRSxLQUFLO1FBQUMsUUFBUTtRQUFDLFNBQVM7S0FBQztDQUNuRCxDQUFDLENBQ0g7QUFDRCxpRUFBZUQsSUFBSSIsInNvdXJjZXMiOlsid2VicGFjazovL2FwaW5leHRzb2NpYWxuZXR3b3JrLy4vcGFnZXMvYXBpL2NvcnMuanM/MTgyMSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQ29ycyBmcm9tICdjb3JzJ1xuaW1wb3J0IGluaXRNaWRkbGV3YXJlIGZyb20gJy4uLy4uL2xpYi9pbml0LW1pZGRsZXdhcmUnXG5cblxuXG4vLyBJbml0aWFsaXplIHRoZSBjb3JzIG1pZGRsZXdhcmVcbmNvbnN0IGNvcnMgPSBpbml0TWlkZGxld2FyZShcbiAgLy8gWW91IGNhbiByZWFkIG1vcmUgYWJvdXQgdGhlIGF2YWlsYWJsZSBvcHRpb25zIGhlcmU6IGh0dHBzOi8vZ2l0aHViLmNvbS9leHByZXNzanMvY29ycyNjb25maWd1cmF0aW9uLW9wdGlvbnNcbiAgQ29ycyh7XG4gICAgLy8gT25seSBhbGxvdyByZXF1ZXN0cyB3aXRoIEdFVCwgUE9TVCxQVVQsREVMRVRFIGFuZCBPUFRJT05TXG4gICAgbWV0aG9kczogWydHRVQnLCAnUE9TVCcsICdQVVQnLCdERUxFVEUnLCdPUFRJT05TJ10sXG4gIH0pXG4pXG5leHBvcnQgZGVmYXVsdCBjb3JzXG5cbiJdLCJuYW1lcyI6WyJDb3JzIiwiaW5pdE1pZGRsZXdhcmUiLCJjb3JzIiwibWV0aG9kcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/cors.js\n");
+
+/***/ }),
+
+/***/ "(api)/./pages/api/post/post.js":
+/*!********************************!*\
+  !*** ./pages/api/post/post.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataPost */ \"socialnetworkk/data/DataPost\");\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var socialnetworkk_entity_DTOPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! socialnetworkk/entity/DTOPost */ \"socialnetworkk/entity/DTOPost\");\n/* harmony import */ var socialnetworkk_entity_DTOPost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_entity_DTOPost__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"OPTIONS\") {\n        try {\n            return res.status(200).send(\"OK\");\n        } catch (error) {\n            return res.status(500).send(\"OPTION ERROR \" + error.message);\n        }\n    }\n    if (req.method === \"POST\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { iduser , title , description  } = req.body;\n            let dtopost = new socialnetworkk_entity_DTOPost__WEBPACK_IMPORTED_MODULE_2__.DTOPost();\n            dtopost.user.iduser = iduser;\n            dtopost.title = title;\n            dtopost.description = description;\n            let addPost = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1__.DataPost.addPost(dtopost);\n            if (addPost === -1) {\n                throw new Error(\"The user does not exists\");\n            }\n            return res.status(200).send(\"The post was added successfully\");\n        } catch (error1) {\n            return res.status(500).send(error1.message);\n        }\n    }\n    if (req.method === \"DELETE\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idpost  } = req.body;\n            let deletePost = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1__.DataPost.deletePost(idpost);\n            if (deletePost === -1) {\n                throw new Error(\"The post does not exists\");\n            }\n            return res.status(200).send(\"The post was deleted successfully\");\n        } catch (error2) {\n            return res.status(500).send(error2.message);\n        }\n    }\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { pid  } = req.query;\n            let getPost = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_1__.DataPost.getPost(pid);\n            if (getPost === -1) {\n                throw new Error(\"The Post does not exists\");\n            }\n            getPost.DiffDatePublishDateNow();\n            getPost.showDiffDatePublishDateNow();\n            return res.status(200).send(getPost);\n        } catch (error3) {\n            return res.status(500).send(error3.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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TCxLQUFLLENBQUMsMEJBQTBCLENBQUMsQ0FBQzthQUMvQztZQUNESyxPQUFPLENBQUNDLHNCQUFzQixFQUFFLENBQUM7WUFDakNELE9BQU8sQ0FBQ0UsMEJBQTBCLEVBQUUsQ0FBQztZQUNuQyxPQUFPcEIsR0FBRyxDQUFDRSxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ2UsT0FBTyxDQUFDLENBQUM7U0FFdEMsQ0FDRixPQUFPZCxNQUFLLEVBQUU7WUFDTixPQUFPSixHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDQyxNQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQ2hEO0tBQ047Q0FDSiIsInNvdXJjZXMiOlsid2VicGFjazovL2FwaW5leHRzb2NpYWxuZXR3b3JrLy4vcGFnZXMvYXBpL3Bvc3QvcG9zdC5qcz8xZjI0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjb3JzIGZyb20gXCIuLi9jb3JzXCI7XHJcbmltcG9ydCB7IERhdGFQb3N0IH0gZnJvbSBcInNvY2lhbG5ldHdvcmtrL2RhdGEvRGF0YVBvc3RcIjtcclxuaW1wb3J0IHsgRFRPUG9zdCB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9lbnRpdHkvRFRPUG9zdFwiO1xyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG5cclxuICBpZihyZXEubWV0aG9kPT09XCJPUFRJT05TXCIpXHJcbiAge1xyXG4gICAgdHJ5XHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKFwiT0tcIilcclxuICAgIH1cclxuICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLnNlbmQoXCJPUFRJT04gRVJST1IgXCIrZXJyb3IubWVzc2FnZSk7XHJcbiAgICB9XHJcbiAgfVxyXG4gIGlmKHJlcS5tZXRob2Q9PT1cIlBPU1RcIilcclxuICB7XHJcbiAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgdHJ5XHJcbiAgICB7XHJcbiAgICAgICAgICAgIGNvbnN0IHtpZHVzZXIsdGl0bGUsZGVzY3JpcHRpb259ID0gcmVxLmJvZHk7XHJcbiAgICAgICAgICAgIGxldCBkdG9wb3N0ID0gbmV3IERUT1Bvc3QoKTtcclxuICAgICAgICAgICAgZHRvcG9zdC51c2VyLmlkdXNlciA9IGlkdXNlcjtcclxuICAgICAgICAgICAgZHRvcG9zdC50aXRsZSA9dGl0bGU7XHJcbiAgICAgICAgICAgIGR0b3Bvc3QuZGVzY3JpcHRpb24gPSBkZXNjcmlwdGlvbjtcclxuICAgICAgICAgICAgbGV0IGFkZFBvc3QgPSBhd2FpdCBEYXRhUG9zdC5hZGRQb3N0KGR0b3Bvc3QpO1xyXG4gICAgICAgICAgICBpZiAoYWRkUG9zdD09PS0xKSB7XHJcbiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoXCJUaGUgdXNlciBkb2VzIG5vdCBleGlzdHNcIik7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLnNlbmQoXCJUaGUgcG9zdCB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5XCIpOyAgIFxyXG4gICAgfVxyXG4gICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgIHJldHVybiByZXMuc3RhdHVzKDUwMCkuc2VuZChlcnJvci5tZXNzYWdlKTsgICAgXHJcbiAgICAgIFxyXG4gICAgfVxyXG4gIH1cclxuICBpZihyZXEubWV0aG9kPT09XCJERUxFVEVcIilcclxuICB7XHJcbiAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgdHJ5XHJcbiAgICB7XHJcbiAgICAgIGNvbnN0IHtpZHBvc3R9ID0gcmVxLmJvZHk7XHJcbiAgICAgIGxldCBkZWxldGVQb3N0ID0gYXdhaXQgRGF0YVBvc3QuZGVsZXRlUG9zdChpZHBvc3QpO1xyXG4gICAgICBpZiAoZGVsZXRlUG9zdD09PS0xKSB7XHJcbiAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKFwiVGhlIHBvc3QgZG9lcyBub3QgZXhpc3RzXCIpO1xyXG4gICAgICAgfVxyXG4gICAgICAgICAgXHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKFwiVGhlIHBvc3Qgd2FzIGRlbGV0ZWQgc3VjY2Vzc2Z1bGx5XCIpO1xyXG4gICAgICAgIFxyXG4gICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKCBlcnJvci5tZXNzYWdlKTtcclxuICAgICAgIH1cclxuICAgfVxyXG4gIGlmKHJlcS5tZXRob2Q9PT1cIkdFVFwiKVxyXG4gICAgICB7XHJcbiAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICB0cnlcclxuICAgICAgICB7XHJcbiAgICAgICAgICBjb25zdCB7cGlkfSA9IHJlcS5xdWVyeTtcclxuICAgICAgICAgIGxldCBnZXRQb3N0PWF3YWl0IERhdGFQb3N0LmdldFBvc3QocGlkKTtcclxuICAgICAgICAgaWYgKGdldFBvc3Q9PT0tMSkge1xyXG4gICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKFwiVGhlIFBvc3QgZG9lcyBub3QgZXhpc3RzXCIpO1xyXG4gICAgICAgICB9XHJcbiAgICAgICAgIGdldFBvc3QuRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdygpO1xyXG4gICAgICAgICBnZXRQb3N0LnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KCk7XHJcbiAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGdldFBvc3QpO1xyXG4gICAgICAgICAgICBcclxuICAgICAgICAgfVxyXG4gICAgICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgfVxyXG4gICAgfVxyXG59Il0sIm5hbWVzIjpbImNvcnMiLCJEYXRhUG9zdCIsIkRUT1Bvc3QiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIiwiaWR1c2VyIiwidGl0bGUiLCJkZXNjcmlwdGlvbiIsImJvZHkiLCJkdG9wb3N0IiwidXNlciIsImFkZFBvc3QiLCJFcnJvciIsImlkcG9zdCIsImRlbGV0ZVBvc3QiLCJwaWQiLCJxdWVyeSIsImdldFBvc3QiLCJEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93Iiwic2hvd0RpZmZEYXRlUHVibGlzaERhdGVOb3ciXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/post/post.js\n");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../../webpack-api-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/post/post.js"));
+module.exports = __webpack_exports__;
+
+})();

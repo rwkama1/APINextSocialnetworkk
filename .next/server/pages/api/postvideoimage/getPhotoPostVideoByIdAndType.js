@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/video/getVideosbyIdUser";
-exports.ids = ["pages/api/video/getVideosbyIdUser"];
+exports.id = "pages/api/postvideoimage/getPhotoPostVideoByIdAndType";
+exports.ids = ["pages/api/postvideoimage/getPhotoPostVideoByIdAndType"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataVideo":
-/*!************************************************!*\
-  !*** external "socialnetworkk/data/DataVideo" ***!
-  \************************************************/
+/***/ "socialnetworkk/data/DataPhotoPostVideo":
+/*!*********************************************************!*\
+  !*** external "socialnetworkk/data/DataPhotoPostVideo" ***!
+  \*********************************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataVideo");
+module.exports = require("socialnetworkk/data/DataPhotoPostVideo");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/video/getVideosbyIdUser.js":
-/*!**********************************************!*\
-  !*** ./pages/api/video/getVideosbyIdUser.js ***!
-  \**********************************************/
+/***/ "(api)/./pages/api/postvideoimage/getPhotoPostVideoByIdAndType.js":
+/*!******************************************************************!*\
+  !*** ./pages/api/postvideoimage/getPhotoPostVideoByIdAndType.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataVideo */ \"socialnetworkk/data/DataVideo\");\n/* harmony import */ var socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            let arraydiffdate = [];\n            const { iduser  } = req.query;\n            let array = await socialnetworkk_data_DataVideo__WEBPACK_IMPORTED_MODULE_0__.DataVideo.getVideosbyIdUser(iduser);\n            for (const vid of array){\n                vid.DiffDatePublishDateNow();\n                vid.showDiffDatePublishDateNow();\n                arraydiffdate.push(vid);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdmlkZW8vZ2V0VmlkZW9zYnlJZFVzZXIuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUEwRDtBQUMvQjtBQUUzQiw2QkFBZSwwQ0FBZ0JFLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ3JDLElBQUdELEdBQUcsQ0FBQ0UsTUFBTSxLQUFHLEtBQUssRUFDakI7UUFDRSxNQUFNSCxpREFBSSxDQUFDQyxHQUFHLEVBQUVDLEdBQUcsQ0FBQztRQUNwQixJQUNBO1lBQ0UsSUFBSUUsYUFBYSxHQUFDLEVBQUU7WUFDcEIsTUFBTSxFQUFDQyxNQUFNLEdBQUMsR0FBR0osR0FBRyxDQUFDSyxLQUFLO1lBQzFCLElBQUlDLEtBQUssR0FBQyxNQUFNUixzRkFBMkIsQ0FBQ00sTUFBTSxDQUFDO1lBQ25ELEtBQUssTUFBTUksR0FBRyxJQUFJRixLQUFLLENBQUU7Z0JBQ3JCRSxHQUFHLENBQUNDLHNCQUFzQixFQUFFO2dCQUM1QkQsR0FBRyxDQUFDRSwwQkFBMEIsRUFBRTtnQkFDaENQLGFBQWEsQ0FBQ1EsSUFBSSxDQUFDSCxHQUFHLENBQUMsQ0FBQzthQUMzQjtZQUNELE9BQU9QLEdBQUcsQ0FBQ1csTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNWLGFBQWEsQ0FBQyxDQUFDO1NBRTNDLENBQ0osT0FBT1csS0FBSyxFQUFFO1lBQ0osT0FBT2IsR0FBRyxDQUFDVyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUNoRDtLQUNOO0NBRUYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS92aWRlby9nZXRWaWRlb3NieUlkVXNlci5qcz9iMGZiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IERhdGFWaWRlbyB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFWaWRlb1wiO1xyXG5pbXBvcnQgY29ycyBmcm9tIFwiLi4vY29yc1wiO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKHJlcSwgcmVzKSB7XHJcbiAgICBpZihyZXEubWV0aG9kPT09XCJHRVRcIilcclxuICAgICAgICB7XHJcbiAgICAgICAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgICAgICAgdHJ5XHJcbiAgICAgICAgICB7XHJcbiAgICAgICAgICAgIGxldCBhcnJheWRpZmZkYXRlPVtdO1xyXG4gICAgICAgICAgICBjb25zdCB7aWR1c2VyfSA9IHJlcS5xdWVyeTtcclxuICAgICAgICAgICAgbGV0IGFycmF5PWF3YWl0IERhdGFWaWRlby5nZXRWaWRlb3NieUlkVXNlcihpZHVzZXIpXHJcbiAgICAgICAgICAgIGZvciAoY29uc3QgdmlkIG9mIGFycmF5KSB7XHJcbiAgICAgICAgICAgICAgICB2aWQuRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdygpXHJcbiAgICAgICAgICAgICAgICB2aWQuc2hvd0RpZmZEYXRlUHVibGlzaERhdGVOb3coKVxyXG4gICAgICAgICAgICAgICAgYXJyYXlkaWZmZGF0ZS5wdXNoKHZpZCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGFycmF5ZGlmZmRhdGUpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFWaWRlbyIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJhcnJheWRpZmZkYXRlIiwiaWR1c2VyIiwicXVlcnkiLCJhcnJheSIsImdldFZpZGVvc2J5SWRVc2VyIiwidmlkIiwiRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93IiwicHVzaCIsInN0YXR1cyIsInNlbmQiLCJlcnJvciIsIm1lc3NhZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/video/getVideosbyIdUser.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPhotoPostVideo */ \"socialnetworkk/data/DataPhotoPostVideo\");\n/* harmony import */ var socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            const { id , type  } = req.query;\n            let data = await socialnetworkk_data_DataPhotoPostVideo__WEBPACK_IMPORTED_MODULE_0__.DataPhotoPostVideo.getPhotoPostVideoByIdAndType(id, type);\n            data.DiffDatePublishDateNow();\n            data.showDiffDatePublishDateNow();\n            return res.status(200).send(data);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcG9zdHZpZGVvaW1hZ2UvZ2V0UGhvdG9Qb3N0VmlkZW9CeUlkQW5kVHlwZS5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQTRFO0FBQ2pEO0FBRTNCLDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFDckMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsS0FBSyxFQUNqQjtRQUNFLE1BQU1ILGlEQUFJLENBQUNDLEdBQUcsRUFBRUMsR0FBRyxDQUFDO1FBQ3BCLElBQ0E7WUFFRSxNQUFNLEVBQUNFLEVBQUUsR0FBQ0MsSUFBSSxHQUFDLEdBQUdKLEdBQUcsQ0FBQ0ssS0FBSztZQUUzQixJQUFJQyxJQUFJLEdBQUMsTUFBTVIsbUhBQStDLENBQzdESyxFQUFFLEVBQUNDLElBQUksQ0FBQztZQUNURSxJQUFJLENBQUNFLHNCQUFzQixFQUFFO1lBQzdCRixJQUFJLENBQUNHLDBCQUEwQixFQUFFO1lBRWpDLE9BQU9SLEdBQUcsQ0FBQ1MsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNMLElBQUksQ0FBQyxDQUFDO1NBRWxDLENBQ0osT0FBT00sS0FBSyxFQUFFO1lBQ0osT0FBT1gsR0FBRyxDQUFDUyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUNoRDtLQUNOO0NBRUYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS9wb3N0dmlkZW9pbWFnZS9nZXRQaG90b1Bvc3RWaWRlb0J5SWRBbmRUeXBlLmpzPzQ5YzAiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRGF0YVBob3RvUG9zdFZpZGVvIH0gZnJvbSBcInNvY2lhbG5ldHdvcmtrL2RhdGEvRGF0YVBob3RvUG9zdFZpZGVvXCI7XHJcbmltcG9ydCBjb3JzIGZyb20gXCIuLi9jb3JzXCI7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAocmVxLCByZXMpIHtcclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIkdFVFwiKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgIGF3YWl0IGNvcnMocmVxLCByZXMpXHJcbiAgICAgICAgICB0cnlcclxuICAgICAgICAgIHtcclxuICAgICAgICAgXHJcbiAgICAgICAgICAgIGNvbnN0IHtpZCx0eXBlfSA9IHJlcS5xdWVyeTtcclxuICAgICAgICAgICAgXHJcbiAgICAgICAgICAgIGxldCBkYXRhPWF3YWl0IERhdGFQaG90b1Bvc3RWaWRlby5nZXRQaG90b1Bvc3RWaWRlb0J5SWRBbmRUeXBlXHJcbiAgICAgICAgICAgIChpZCx0eXBlKSAgIFxyXG4gICAgICAgICAgICBkYXRhLkRpZmZEYXRlUHVibGlzaERhdGVOb3coKVxyXG4gICAgICAgICAgICBkYXRhLnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICBcclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGRhdGEpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFQaG90b1Bvc3RWaWRlbyIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJpZCIsInR5cGUiLCJxdWVyeSIsImRhdGEiLCJnZXRQaG90b1Bvc3RWaWRlb0J5SWRBbmRUeXBlIiwiRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93Iiwic3RhdHVzIiwic2VuZCIsImVycm9yIiwibWVzc2FnZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/postvideoimage/getPhotoPostVideoByIdAndType.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/video/getVideosbyIdUser.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/postvideoimage/getPhotoPostVideoByIdAndType.js"));
 module.exports = __webpack_exports__;
 
 })();
