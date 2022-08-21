@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/post/updateTitleDescriptionPost";
-exports.ids = ["pages/api/post/updateTitleDescriptionPost"];
+exports.id = "pages/api/user/getLikesVideoUsers";
+exports.ids = ["pages/api/user/getLikesVideoUsers"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataPost":
+/***/ "socialnetworkk/data/DataUser":
 /*!***********************************************!*\
-  !*** external "socialnetworkk/data/DataPost" ***!
+  !*** external "socialnetworkk/data/DataUser" ***!
   \***********************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataPost");
+module.exports = require("socialnetworkk/data/DataUser");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/post/updateTitleDescriptionPost.js":
-/*!******************************************************!*\
-  !*** ./pages/api/post/updateTitleDescriptionPost.js ***!
-  \******************************************************/
+/***/ "(api)/./pages/api/user/getLikesVideoUsers.js":
+/*!**********************************************!*\
+  !*** ./pages/api/user/getLikesVideoUsers.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPost */ \"socialnetworkk/data/DataPost\");\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"OPTIONS\") {\n        try {\n            return res.status(200).send(\"OK\");\n        } catch (error) {\n            return res.status(500).send(\"OPTION ERROR \" + error.message);\n        }\n    }\n    if (req.method === \"PUT\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            const { idpost , description , title  } = req.body;\n            let updateTitleDescriptionPost = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__.DataPost.updateTitleDescriptionPost(idpost, description, title);\n            if (updateTitleDescriptionPost === -1) {\n                throw new Error(\"The Post does not exists\");\n            }\n            return res.status(200).send(\"The post was updated successfully\");\n        } catch (error1) {\n            return res.status(500).send(error1.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcG9zdC91cGRhdGVUaXRsZURlc2NyaXB0aW9uUG9zdC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQXdEO0FBQzdCO0FBRTNCLDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFFckMsSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsU0FBUyxFQUN6QjtRQUNFLElBQ0E7WUFDSSxPQUFPRCxHQUFHLENBQUNFLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDLElBQUksQ0FBQztTQUNwQyxDQUNELE9BQU9DLEtBQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMsZUFBZSxHQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQyxDQUFDO1NBQzVEO0tBQ0Y7SUFDRCxJQUFHTixHQUFHLENBQUNFLE1BQU0sS0FBRyxLQUFLLEVBQ3JCO1FBQ0UsTUFBTUgsaURBQUksQ0FBQ0MsR0FBRyxFQUFFQyxHQUFHLENBQUM7UUFDcEIsSUFDQTtZQUNFLE1BQU0sRUFBQ00sTUFBTSxHQUFDQyxXQUFXLEdBQUNDLEtBQUssR0FBQyxHQUFHVCxHQUFHLENBQUNVLElBQUk7WUFFM0MsSUFBSUMsMEJBQTBCLEdBQUcsTUFBTWIsNkZBQ2IsQ0FBQ1MsTUFBTSxFQUFDQyxXQUFXLEVBQUNDLEtBQUssQ0FBQztZQUNwRCxJQUFJRSwwQkFBMEIsS0FBRyxDQUFDLENBQUMsRUFBRTtnQkFDbEMsTUFBTSxJQUFJQyxLQUFLLENBQUMsMEJBQTBCLENBQUMsQ0FBQzthQUM5QztZQUNDLE9BQU9YLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUMsbUNBQW1DLENBQUMsQ0FBQztTQUNwRSxDQUNELE9BQU9DLE1BQUssRUFBRTtZQUNaLE9BQU9KLEdBQUcsQ0FBQ0UsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNDLE1BQUssQ0FBQ0MsT0FBTyxDQUFDLENBQUM7U0FFNUM7S0FDRjtDQUVGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9wYWdlcy9hcGkvcG9zdC91cGRhdGVUaXRsZURlc2NyaXB0aW9uUG9zdC5qcz9kODUwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IERhdGFQb3N0IH0gZnJvbSBcInNvY2lhbG5ldHdvcmtrL2RhdGEvRGF0YVBvc3RcIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG5cclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIk9QVElPTlNcIilcclxuICAgIHtcclxuICAgICAgdHJ5XHJcbiAgICAgIHtcclxuICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIk9LXCIpXHJcbiAgICAgIH1cclxuICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKFwiT1BUSU9OIEVSUk9SIFwiK2Vycm9yLm1lc3NhZ2UpO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgICBpZihyZXEubWV0aG9kPT09XCJQVVRcIilcclxuICAgIHtcclxuICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgdHJ5XHJcbiAgICAgIHtcclxuICAgICAgICBjb25zdCB7aWRwb3N0LGRlc2NyaXB0aW9uLHRpdGxlfSA9IHJlcS5ib2R5O1xyXG4gICAgICAgICAgICBcclxuICAgICAgICBsZXQgdXBkYXRlVGl0bGVEZXNjcmlwdGlvblBvc3QgPSBhd2FpdCBEYXRhUG9zdC5cclxuICAgICAgICB1cGRhdGVUaXRsZURlc2NyaXB0aW9uUG9zdChpZHBvc3QsZGVzY3JpcHRpb24sdGl0bGUpO1xyXG4gICAgICAgIGlmICh1cGRhdGVUaXRsZURlc2NyaXB0aW9uUG9zdD09PS0xKSB7XHJcbiAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKFwiVGhlIFBvc3QgZG9lcyBub3QgZXhpc3RzXCIpO1xyXG4gICAgICAgIH1cclxuICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChcIlRoZSBwb3N0IHdhcyB1cGRhdGVkIHN1Y2Nlc3NmdWxseVwiKTsgICBcclxuICAgICAgfVxyXG4gICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLnNlbmQoZXJyb3IubWVzc2FnZSk7ICAgIFxyXG4gICAgICAgIFxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgXHJcbiAgfSJdLCJuYW1lcyI6WyJEYXRhUG9zdCIsImNvcnMiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIiwiaWRwb3N0IiwiZGVzY3JpcHRpb24iLCJ0aXRsZSIsImJvZHkiLCJ1cGRhdGVUaXRsZURlc2NyaXB0aW9uUG9zdCIsIkVycm9yIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/post/updateTitleDescriptionPost.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataUser */ \"socialnetworkk/data/DataUser\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__);\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idvideo  } = req.query;\n            let getLikesVideoUsers = await socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__.DataUser.getLikesVideoUsers(idvideo);\n            return res.status(200).send(getLikesVideoUsers);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9nZXRMaWtlc1ZpZGVvVXNlcnMuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUEyQjtBQUM2QjtBQUd4RCw2QkFBZSwwQ0FBZ0JFLEdBQUcsRUFBRUMsR0FBRyxFQUN2QztJQUNJLElBQUdELEdBQUcsQ0FBQ0UsTUFBTSxLQUFHLEtBQUssRUFDckI7UUFDRSxNQUFNSixpREFBSSxDQUFDRSxHQUFHLEVBQUVDLEdBQUcsQ0FBQztRQUNwQixJQUNBO1lBQ0UsTUFBTSxFQUFDRSxPQUFPLEdBQUMsR0FBR0gsR0FBRyxDQUFDSSxLQUFLO1lBQzNCLElBQUlDLGtCQUFrQixHQUFHLE1BQU1OLHFGQUEyQixDQUFDSSxPQUFPLENBQUM7WUFDakUsT0FBT0YsR0FBRyxDQUFDSyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0Ysa0JBQWtCLENBQUMsQ0FBQztTQUVuRCxDQUNELE9BQU9HLEtBQUssRUFBRTtZQUNOLE9BQU9QLEdBQUcsQ0FBQ0ssTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNDLEtBQUssQ0FBQ0MsT0FBTyxDQUFDLENBQUM7U0FDL0M7S0FDUDtDQUNGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9wYWdlcy9hcGkvdXNlci9nZXRMaWtlc1ZpZGVvVXNlcnMuanM/M2ZhZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgY29ycyBmcm9tIFwiLi4vY29yc1wiO1xyXG5pbXBvcnQgeyBEYXRhVXNlciB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFVc2VyXCI7XHJcblxyXG5cclxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKHJlcSwgcmVzKSBcclxue1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICB7XHJcbiAgICAgIGF3YWl0IGNvcnMocmVxLCByZXMpXHJcbiAgICAgIHRyeVxyXG4gICAgICB7XHJcbiAgICAgICAgY29uc3Qge2lkdmlkZW99ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIGxldCBnZXRMaWtlc1ZpZGVvVXNlcnMgPSBhd2FpdCBEYXRhVXNlci5nZXRMaWtlc1ZpZGVvVXNlcnMoaWR2aWRlbyk7XHJcbiAgICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLnNlbmQoZ2V0TGlrZXNWaWRlb1VzZXJzKTtcclxuICAgICAgICAgIFxyXG4gICAgICB9XHJcbiAgICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDUwMCkuc2VuZChlcnJvci5tZXNzYWdlKTtcclxuICAgICAgICAgfVxyXG4gIH1cclxufSJdLCJuYW1lcyI6WyJjb3JzIiwiRGF0YVVzZXIiLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJpZHZpZGVvIiwicXVlcnkiLCJnZXRMaWtlc1ZpZGVvVXNlcnMiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/getLikesVideoUsers.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/post/updateTitleDescriptionPost.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/getLikesVideoUsers.js"));
 module.exports = __webpack_exports__;
 
 })();

@@ -2,5 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/postvideoimage/getPhotoPostVideoByIdAndType": "pages/api/postvideoimage/getPhotoPostVideoByIdAndType.js"
+  "/api/likes/likeimage": "pages/api/likes/likeimage.js"
 }

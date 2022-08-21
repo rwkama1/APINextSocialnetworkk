@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/post/getPostbyIdUser";
-exports.ids = ["pages/api/post/getPostbyIdUser"];
+exports.id = "pages/api/user/getLikesCommentUsers";
+exports.ids = ["pages/api/user/getLikesCommentUsers"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataPost":
+/***/ "socialnetworkk/data/DataUser":
 /*!***********************************************!*\
-  !*** external "socialnetworkk/data/DataPost" ***!
+  !*** external "socialnetworkk/data/DataUser" ***!
   \***********************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataPost");
+module.exports = require("socialnetworkk/data/DataUser");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/post/getPostbyIdUser.js":
-/*!*******************************************!*\
-  !*** ./pages/api/post/getPostbyIdUser.js ***!
-  \*******************************************/
+/***/ "(api)/./pages/api/user/getLikesCommentUsers.js":
+/*!************************************************!*\
+  !*** ./pages/api/user/getLikesCommentUsers.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataPost */ \"socialnetworkk/data/DataPost\");\n/* harmony import */ var socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            const { pid  } = req.query;\n            let arraydiffdate = [];\n            let array = await socialnetworkk_data_DataPost__WEBPACK_IMPORTED_MODULE_0__.DataPost.getPostbyIdUser(pid);\n            for (const post of array){\n                post.DiffDatePublishDateNow();\n                post.showDiffDatePublishDateNow();\n                arraydiffdate.push(post);\n            }\n            return res.status(200).send(arraydiffdate);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvcG9zdC9nZXRQb3N0YnlJZFVzZXIuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUF3RDtBQUM3QjtBQUUzQiw2QkFBZSwwQ0FBZ0JFLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ3JDLElBQUdELEdBQUcsQ0FBQ0UsTUFBTSxLQUFHLEtBQUssRUFDakI7UUFDRSxNQUFNSCxpREFBSSxDQUFDQyxHQUFHLEVBQUVDLEdBQUcsQ0FBQztRQUNwQixJQUNBO1lBQ0UsTUFBTSxFQUFDRSxHQUFHLEdBQUMsR0FBR0gsR0FBRyxDQUFDSSxLQUFLO1lBQ3ZCLElBQUlDLGFBQWEsR0FBQyxFQUFFO1lBQ3BCLElBQUlDLEtBQUssR0FBQyxNQUFNUixrRkFBd0IsQ0FBQ0ssR0FBRyxDQUFDO1lBQzdDLEtBQUssTUFBTUssSUFBSSxJQUFJRixLQUFLLENBQUU7Z0JBQ3hCRSxJQUFJLENBQUNDLHNCQUFzQixFQUFFO2dCQUM3QkQsSUFBSSxDQUFDRSwwQkFBMEIsRUFBRTtnQkFDakNMLGFBQWEsQ0FBQ00sSUFBSSxDQUFDSCxJQUFJLENBQUMsQ0FBQzthQUMxQjtZQUNELE9BQU9QLEdBQUcsQ0FBQ1csTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNSLGFBQWEsQ0FBQyxDQUFDO1NBRTNDLENBQ0osT0FBT1MsS0FBSyxFQUFFO1lBQ0osT0FBT2IsR0FBRyxDQUFDVyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUNoRDtLQUNOO0NBRUYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS9wb3N0L2dldFBvc3RieUlkVXNlci5qcz9jZDI4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IERhdGFQb3N0IH0gZnJvbSBcInNvY2lhbG5ldHdvcmtrL2RhdGEvRGF0YVBvc3RcIjtcclxuaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykge1xyXG4gICAgaWYocmVxLm1ldGhvZD09PVwiR0VUXCIpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgYXdhaXQgY29ycyhyZXEsIHJlcylcclxuICAgICAgICAgIHRyeVxyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBjb25zdCB7cGlkfSA9IHJlcS5xdWVyeTtcclxuICAgICAgICAgICAgbGV0IGFycmF5ZGlmZmRhdGU9W107XHJcbiAgICAgICAgICAgIGxldCBhcnJheT1hd2FpdCBEYXRhUG9zdC5nZXRQb3N0YnlJZFVzZXIocGlkKTtcclxuICAgICAgICAgICAgZm9yIChjb25zdCBwb3N0IG9mIGFycmF5KSB7XHJcbiAgICAgICAgICAgICAgcG9zdC5EaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICBwb3N0LnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICAgICAgICBhcnJheWRpZmZkYXRlLnB1c2gocG9zdCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKGFycmF5ZGlmZmRhdGUpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFQb3N0IiwiY29ycyIsInJlcSIsInJlcyIsIm1ldGhvZCIsInBpZCIsInF1ZXJ5IiwiYXJyYXlkaWZmZGF0ZSIsImFycmF5IiwiZ2V0UG9zdGJ5SWRVc2VyIiwicG9zdCIsIkRpZmZEYXRlUHVibGlzaERhdGVOb3ciLCJzaG93RGlmZkRhdGVQdWJsaXNoRGF0ZU5vdyIsInB1c2giLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/post/getPostbyIdUser.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataUser */ \"socialnetworkk/data/DataUser\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__);\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idcomment  } = req.query;\n            let getLikesCommentUsers = await socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__.DataUser.getLikesCommentUsers(idcomment);\n            return res.status(200).send(getLikesCommentUsers);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9nZXRMaWtlc0NvbW1lbnRVc2Vycy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQTJCO0FBQzZCO0FBR3hELDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQ3ZDO0lBQ0ksSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsS0FBSyxFQUNyQjtRQUNFLE1BQU1KLGlEQUFJLENBQUNFLEdBQUcsRUFBRUMsR0FBRyxDQUFDO1FBQ3BCLElBQ0E7WUFDRSxNQUFNLEVBQUNFLFNBQVMsR0FBQyxHQUFHSCxHQUFHLENBQUNJLEtBQUs7WUFDN0IsSUFBSUMsb0JBQW9CLEdBQUcsTUFBTU4sdUZBQTZCLENBQUNJLFNBQVMsQ0FBQztZQUN2RSxPQUFPRixHQUFHLENBQUNLLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDRixvQkFBb0IsQ0FBQyxDQUFDO1NBRXJELENBQ0QsT0FBT0csS0FBSyxFQUFFO1lBQ04sT0FBT1AsR0FBRyxDQUFDSyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUMvQztLQUNQO0NBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS91c2VyL2dldExpa2VzQ29tbWVudFVzZXJzLmpzPzIyMmUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuaW1wb3J0IHsgRGF0YVVzZXIgfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhVXNlclwiO1xyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykgXHJcbntcclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIkdFVFwiKVxyXG4gICAge1xyXG4gICAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgICB0cnlcclxuICAgICAge1xyXG4gICAgICAgIGNvbnN0IHtpZGNvbW1lbnR9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIGxldCBnZXRMaWtlc0NvbW1lbnRVc2VycyA9IGF3YWl0IERhdGFVc2VyLmdldExpa2VzQ29tbWVudFVzZXJzKGlkY29tbWVudCk7XHJcbiAgICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLnNlbmQoZ2V0TGlrZXNDb21tZW50VXNlcnMpO1xyXG4gICAgICAgICAgXHJcbiAgICAgIH1cclxuICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICB9XHJcbiAgfVxyXG59Il0sIm5hbWVzIjpbImNvcnMiLCJEYXRhVXNlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsImlkY29tbWVudCIsInF1ZXJ5IiwiZ2V0TGlrZXNDb21tZW50VXNlcnMiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/getLikesCommentUsers.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/post/getPostbyIdUser.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/getLikesCommentUsers.js"));
 module.exports = __webpack_exports__;
 
 })();
