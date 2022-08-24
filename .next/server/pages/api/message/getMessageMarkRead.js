@@ -9,8 +9,8 @@
  */
 (() => {
 var exports = {};
-exports.id = "pages/api/user/getLikesCommentUsers";
-exports.ids = ["pages/api/user/getLikesCommentUsers"];
+exports.id = "pages/api/message/getMessageMarkRead";
+exports.ids = ["pages/api/message/getMessageMarkRead"];
 exports.modules = {
 
 /***/ "cors":
@@ -23,13 +23,13 @@ module.exports = require("cors");
 
 /***/ }),
 
-/***/ "socialnetworkk/data/DataUser":
-/*!***********************************************!*\
-  !*** external "socialnetworkk/data/DataUser" ***!
-  \***********************************************/
+/***/ "socialnetworkk/data/DataMessage":
+/*!**************************************************!*\
+  !*** external "socialnetworkk/data/DataMessage" ***!
+  \**************************************************/
 /***/ ((module) => {
 
-module.exports = require("socialnetworkk/data/DataUser");
+module.exports = require("socialnetworkk/data/DataMessage");
 
 /***/ }),
 
@@ -53,13 +53,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(api)/./pages/api/user/getLikesCommentUsers.js":
-/*!************************************************!*\
-  !*** ./pages/api/user/getLikesCommentUsers.js ***!
-  \************************************************/
+/***/ "(api)/./pages/api/message/getMessageMarkRead.js":
+/*!*************************************************!*\
+  !*** ./pages/api/message/getMessageMarkRead.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! socialnetworkk/data/DataUser */ \"socialnetworkk/data/DataUser\");\n/* harmony import */ var socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__);\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(req, res);\n        try {\n            const { idcomment  } = req.query;\n            let getLikesCommentUsers = await socialnetworkk_data_DataUser__WEBPACK_IMPORTED_MODULE_1__.DataUser.getLikesCommentUsers(idcomment);\n            return res.status(200).send(getLikesCommentUsers);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9nZXRMaWtlc0NvbW1lbnRVc2Vycy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQTJCO0FBQzZCO0FBR3hELDZCQUFlLDBDQUFnQkUsR0FBRyxFQUFFQyxHQUFHLEVBQ3ZDO0lBQ0ksSUFBR0QsR0FBRyxDQUFDRSxNQUFNLEtBQUcsS0FBSyxFQUNyQjtRQUNFLE1BQU1KLGlEQUFJLENBQUNFLEdBQUcsRUFBRUMsR0FBRyxDQUFDO1FBQ3BCLElBQ0E7WUFDRSxNQUFNLEVBQUNFLFNBQVMsR0FBQyxHQUFHSCxHQUFHLENBQUNJLEtBQUs7WUFDN0IsSUFBSUMsb0JBQW9CLEdBQUcsTUFBTU4sdUZBQTZCLENBQUNJLFNBQVMsQ0FBQztZQUN2RSxPQUFPRixHQUFHLENBQUNLLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDRixvQkFBb0IsQ0FBQyxDQUFDO1NBRXJELENBQ0QsT0FBT0csS0FBSyxFQUFFO1lBQ04sT0FBT1AsR0FBRyxDQUFDSyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUMsQ0FBQztTQUMvQztLQUNQO0NBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hcGluZXh0c29jaWFsbmV0d29yay8uL3BhZ2VzL2FwaS91c2VyL2dldExpa2VzQ29tbWVudFVzZXJzLmpzPzIyMmUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNvcnMgZnJvbSBcIi4uL2NvcnNcIjtcclxuaW1wb3J0IHsgRGF0YVVzZXIgfSBmcm9tIFwic29jaWFsbmV0d29ya2svZGF0YS9EYXRhVXNlclwiO1xyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXEsIHJlcykgXHJcbntcclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIkdFVFwiKVxyXG4gICAge1xyXG4gICAgICBhd2FpdCBjb3JzKHJlcSwgcmVzKVxyXG4gICAgICB0cnlcclxuICAgICAge1xyXG4gICAgICAgIGNvbnN0IHtpZGNvbW1lbnR9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgIGxldCBnZXRMaWtlc0NvbW1lbnRVc2VycyA9IGF3YWl0IERhdGFVc2VyLmdldExpa2VzQ29tbWVudFVzZXJzKGlkY29tbWVudCk7XHJcbiAgICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLnNlbmQoZ2V0TGlrZXNDb21tZW50VXNlcnMpO1xyXG4gICAgICAgICAgXHJcbiAgICAgIH1cclxuICAgICAgY2F0Y2ggKGVycm9yKSB7XHJcbiAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICB9XHJcbiAgfVxyXG59Il0sIm5hbWVzIjpbImNvcnMiLCJEYXRhVXNlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsImlkY29tbWVudCIsInF1ZXJ5IiwiZ2V0TGlrZXNDb21tZW50VXNlcnMiLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/getLikesCommentUsers.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var socialnetworkk_data_DataMessage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socialnetworkk/data/DataMessage */ \"socialnetworkk/data/DataMessage\");\n/* harmony import */ var socialnetworkk_data_DataMessage__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(socialnetworkk_data_DataMessage__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _cors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cors */ \"(api)/./pages/api/cors.js\");\n\n\n/* harmony default export */ async function __WEBPACK_DEFAULT_EXPORT__(req, res) {\n    if (req.method === \"GET\") {\n        await (0,_cors__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, res);\n        try {\n            const { idmessage  } = req.query;\n            let getMessageMarkRead = await socialnetworkk_data_DataMessage__WEBPACK_IMPORTED_MODULE_0__.DataMessage.getMessageMarkRead(idmessage);\n            if (getMessageMarkRead === -1) {\n                throw new Error(\"The message does not exists \");\n            }\n            getMessageMarkRead.DiffDatePublishDateNow();\n            getMessageMarkRead.showDiffDatePublishDateNow();\n            return res.status(200).send(getMessageMarkRead);\n        } catch (error) {\n            return res.status(500).send(error.message);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvbWVzc2FnZS9nZXRNZXNzYWdlTWFya1JlYWQuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUE4RDtBQUNuQztBQUUzQiw2QkFBZSwwQ0FBZ0JFLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ3JDLElBQUdELEdBQUcsQ0FBQ0UsTUFBTSxLQUFHLEtBQUssRUFDakI7UUFDRSxNQUFNSCxpREFBSSxDQUFDQyxHQUFHLEVBQUVDLEdBQUcsQ0FBQztRQUNwQixJQUNBO1lBRUUsTUFBTSxFQUFDRSxTQUFTLEdBQUMsR0FBR0gsR0FBRyxDQUFDSSxLQUFLO1lBQzdCLElBQUlDLGtCQUFrQixHQUFDLE1BQU1QLDJGQUE4QixDQUFDSyxTQUFTLENBQUM7WUFDdEUsSUFBSUUsa0JBQWtCLEtBQUcsQ0FBQyxDQUFDLEVBQzNCO2dCQUNJLE1BQU0sSUFBSUMsS0FBSyxDQUFDLDhCQUE4QixDQUFDLENBQUM7YUFDbkQ7WUFDREQsa0JBQWtCLENBQUNFLHNCQUFzQixFQUFFO1lBQ3pDRixrQkFBa0IsQ0FBQ0csMEJBQTBCLEVBQUU7WUFHakQsT0FBT1AsR0FBRyxDQUFDUSxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUNDLElBQUksQ0FBQ0wsa0JBQWtCLENBQUMsQ0FBQztTQUVoRCxDQUNKLE9BQU9NLEtBQUssRUFBRTtZQUNKLE9BQU9WLEdBQUcsQ0FBQ1EsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUNDLEtBQUssQ0FBQ0MsT0FBTyxDQUFDLENBQUM7U0FDaEQ7S0FDTjtDQUVGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYXBpbmV4dHNvY2lhbG5ldHdvcmsvLi9wYWdlcy9hcGkvbWVzc2FnZS9nZXRNZXNzYWdlTWFya1JlYWQuanM/NzFhOSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEYXRhTWVzc2FnZSB9IGZyb20gXCJzb2NpYWxuZXR3b3Jray9kYXRhL0RhdGFNZXNzYWdlXCI7XHJcbmltcG9ydCBjb3JzIGZyb20gXCIuLi9jb3JzXCI7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAocmVxLCByZXMpIHtcclxuICAgIGlmKHJlcS5tZXRob2Q9PT1cIkdFVFwiKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgIGF3YWl0IGNvcnMocmVxLCByZXMpXHJcbiAgICAgICAgICB0cnlcclxuICAgICAgICAgIHtcclxuICAgICAgICAgXHJcbiAgICAgICAgICAgIGNvbnN0IHtpZG1lc3NhZ2V9ID0gcmVxLnF1ZXJ5O1xyXG4gICAgICAgICAgICBsZXQgZ2V0TWVzc2FnZU1hcmtSZWFkPWF3YWl0IERhdGFNZXNzYWdlLmdldE1lc3NhZ2VNYXJrUmVhZChpZG1lc3NhZ2UpO1xyXG4gICAgICAgICAgICBpZiAoZ2V0TWVzc2FnZU1hcmtSZWFkPT09LTEpIFxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoXCJUaGUgbWVzc2FnZSBkb2VzIG5vdCBleGlzdHMgXCIpOyAgICBcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBnZXRNZXNzYWdlTWFya1JlYWQuRGlmZkRhdGVQdWJsaXNoRGF0ZU5vdygpXHJcbiAgICAgICAgICAgICAgZ2V0TWVzc2FnZU1hcmtSZWFkLnNob3dEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93KClcclxuICAgICAgICBcclxuICAgICAgICAgICAgXHJcbiAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuc2VuZChnZXRNZXNzYWdlTWFya1JlYWQpO1xyXG4gICAgICAgICAgICAgIFxyXG4gICAgICAgICAgIH1cclxuICAgICAgICBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5zZW5kKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgIH1cclxuXHJcbiAgICB9Il0sIm5hbWVzIjpbIkRhdGFNZXNzYWdlIiwiY29ycyIsInJlcSIsInJlcyIsIm1ldGhvZCIsImlkbWVzc2FnZSIsInF1ZXJ5IiwiZ2V0TWVzc2FnZU1hcmtSZWFkIiwiRXJyb3IiLCJEaWZmRGF0ZVB1Ymxpc2hEYXRlTm93Iiwic2hvd0RpZmZEYXRlUHVibGlzaERhdGVOb3ciLCJzdGF0dXMiLCJzZW5kIiwiZXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/message/getMessageMarkRead.js\n");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/getLikesCommentUsers.js"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/message/getMessageMarkRead.js"));
 module.exports = __webpack_exports__;
 
 })();

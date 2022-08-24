@@ -63,5 +63,25 @@ export default async function (req, res) {
             return res.status(500).send( error.message);
        }
    }
+   if(req.method==="GET")
+   {
+     await cors(req, res)
+     try
+     {
+      const {idmessage} = req.query;
+        let message=await DataMessage.getMessage(idmessage);
+        if (message===-1) 
+        {
+            throw new Error("The message does not exists ");    
+        }
+        message.DiffDatePublishDateNow()
+          message.showDiffDatePublishDateNow()
+       return res.status(200).send(message);
+         
+      }
+   catch (error) {
+             return res.status(500).send(error.message);
+       }
+ }
  
 }

@@ -9,12 +9,13 @@ export default async function (req, res) {
           {
             let arraydiffdate=[];
             const {iduserlogin} = req.query;
-            let array=await DataMessage.getMessagesByUserReceived(iduserlogin);
+            let array=await DataMessage.getMessagesByUserSender(iduserlogin);
             for (const message of array) {
                 message.DiffDatePublishDateNow()
                 message.showDiffDatePublishDateNow()
                 arraydiffdate.push(message);
-                 }     
+               
+            }     
             return res.status(200).send(arraydiffdate);
               
            }
