@@ -5,9 +5,9 @@ export default class Index extends Component
 {
   render()
   {
-    return(<div>
+    return(<>
       API REST NEXT SocialNetworkk
-     </div>
+      </>
     )
   }
   
