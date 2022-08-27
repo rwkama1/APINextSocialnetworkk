@@ -24,7 +24,8 @@ export default async function (req, res) {
             let hashpassword = passh.hash;
             let salt = passh.salt;
        
-            let updateusernamepassword = await DataUser.updateUserNamePassword(data.username, hashpassword, salt, data.iduser);
+            let updateusernamepassword = await DataUser.updateUserNamePassword
+            (data.username, hashpassword, salt, data.iduser);
             if (updateusernamepassword===-1) {
                 throw new Error("The user does not exists");
             }

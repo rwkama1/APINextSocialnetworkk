@@ -20,7 +20,8 @@ export default async function (req, res) {
     try
     {
             const data = req.body;
-            let insertCoverPicture = await DataUser.insertCoverPicture(data.imgcoverurl, data.username);
+            let insertCoverPicture = await DataUser.insertCoverPicture
+            (data.imgcoverurl, data.username);
             if (insertCoverPicture===-1)
              {
                throw new Error("The user name does not exists");

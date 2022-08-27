@@ -21,7 +21,8 @@ export default async function (req, res) {
     try
     {
             const data = req.body;
-            let deleteCoverPicture = await DataUser.deleteCoverPicture(data.username);
+            let deleteCoverPicture = await DataUser.deleteCoverPicture
+            (data.username);
             if (deleteCoverPicture===-1)
                {
                throw new Error("The user name does not exists");
