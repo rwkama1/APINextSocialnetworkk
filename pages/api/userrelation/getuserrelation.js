@@ -15,7 +15,7 @@ export default async function (req, res)
         let getUserRelation = await DataUserRelation.getUserRelation(piduser,pidfriend);
         if (getUserRelation===-1)
           {
-            throw new Error("The user name does not exists");
+            throw new Error("The user relation does not exists");
           }
           return res.status(200).send(getUserRelation);
           

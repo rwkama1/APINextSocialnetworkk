@@ -21,7 +21,8 @@ export default async function (req, res) {
     try
     {
             const data = req.body;
-            let updateStateUser = await DataUser.updateStateUser(data.state, data.username);
+            let updateStateUser = await DataUser.updateStateUser(
+              data.state, data.username);
             if (updateStateUser===-1)
             {
               throw new Error("The user name does not exists");

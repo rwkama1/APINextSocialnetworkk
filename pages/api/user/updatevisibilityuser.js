@@ -19,7 +19,8 @@ export default async function (req, res) {
       try
       {
               const data = req.body;
-              let updateVisibilityUser = await DataUser.updateVisibilityUser(data.visibility, data.username);
+              let updateVisibilityUser = await DataUser.updateVisibilityUser(
+                data.visibility, data.username);
               if (updateVisibilityUser===-1)
               {
                 throw new Error("The user name does not exists");
