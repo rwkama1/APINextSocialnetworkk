@@ -522,4 +522,107 @@ https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUs
 
 
 
+### IMAGES
+
+
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image
+Body-raw-JSON
+{
+  "iduser":1,
+  "idalbum":2,
+  "title":"ImageTitle",
+  "description":"DescriptionImage",
+  "urlimage":"urlimage"
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image
+
+Body-raw-JSON
+
+{
+  "idimage":1
+}
+
+#### Update Title Description Image (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/updateTitleDescriptionPhoto
+
+Body-raw-JSON
+{
+  "idimage":2,
+  "description":"Description",
+  "title":"ImageTitle"
+  
+}
+
+#### Update Visibility Images (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/updateVisibilityPhoto
+
+Body-raw-JSON
+{
+  "idimage":2,
+  "visibility":"Friend"
+ 
+  
+}
+
+
+#### Get Images By Album (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesByAlbum?pidalbum=1
+
+#### Get Images By Album and User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyAlbumAndUser?pidalbum=1&piduser=1
+
+#### Get Images By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyFriendUser?piduser=3
+
+#### Get Images (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImages
+
+#### Get Images By Id User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyIdUser?piduser=1
+
+#### Get Images By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesByLikeUser?piduser=3
+
+#### Get Images Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?iduserlogin=1&country=USA
+
+#### Get Videos Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityByUserRelation?iduserlogin=1&iduser=2
+
+#### Get Videos Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
+
+#### Get Videos Visibility By Public User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUser?iduser=1
+
+
+
+
+
 

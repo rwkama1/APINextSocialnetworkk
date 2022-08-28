@@ -10,7 +10,7 @@ export default async function (req, res) {
             let arraydiffdate=[];
             const {piduser,pcountry} = req.query;
             let iduser=Number(piduser);
-            let array=await DataPhoto.getImagesByLikeUser(iduser,pcountry);
+            let array=await DataPhoto.getImagesMainPage(iduser,pcountry);
                 for (const image of array) {
                 image.DiffDatePublishDateNow()
                 image.showDiffDatePublishDateNow()
