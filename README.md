@@ -421,7 +421,12 @@ https://apin-ext-socialnetworkk.vercel.app/api/albumvideo/getAlbumVideobyUser?pi
 https://apin-ext-socialnetworkk.vercel.app/api/albumvideo/getsAlbumVideos
 
 
+
 ### VIDEO
+
+
+
+
 
 #### GET
 
@@ -482,9 +487,39 @@ https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbum?pidalbum=2
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbumAndUser?pidalbum=3&iduser=8
 
-#### Get Videos By Album and User (GET)
+#### Get Videos By Friend User (GET)
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyFriendUser?iduser=3
+
+#### Get Videos (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideos
+
+#### Get Videos By Id User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyIdUser?iduser=2
+
+#### Get Videos By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosByLikeUser?iduserlogin=1
+
+#### Get Videos Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosMainPage?iduserlogin=1&country=USA
+
+#### Get Videos Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityByUserRelation?iduserlogin=1&iduser=2
+
+#### Get Videos Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
+
+#### Get Videos Visibility By Public User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUser?iduser=1
+
+
 
 
 
