@@ -6,7 +6,7 @@
 2. [UserRelation](#USERRELATION)
 3. [AlbumImage](#ALBUMIMAGE)
 4. [AlbumVideo](#ALBUMVIDEO)
-5. [Video](#Video)
+5. [Video](#VIDEO)
 6. [Images](#Images)
 7. [Post](#Post)
 8. [PostVideoImage](#PostVideoImage)
@@ -421,6 +421,66 @@ https://apin-ext-socialnetworkk.vercel.app/api/albumvideo/getAlbumVideobyUser?pi
 https://apin-ext-socialnetworkk.vercel.app/api/albumvideo/getsAlbumVideos
 
 
+### VIDEO
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+Body-raw-JSON
+{
+  "iduser":1,
+  "idalbum":2,
+  "title":"VideoTitle",
+  "description":"DescriptionVideo",
+  "urlvideo":"urlvideo"
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+
+Body-raw-JSON
+
+{
+  "idvideo":1
+}
+
+#### Update Title Description Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateTitleDescriptionVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "description":"Description",
+  "title":"VideoTitle"
+  
+}
+
+#### Update Visibility Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateVisibilityVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "visibility":"Friend"
+  
+}
+
+#### Get Videos By Album  (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbum?pidalbum=2
+
+#### Get Videos By Album and User  (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbumAndUser?pidalbum=3&iduser=8
 
 
 

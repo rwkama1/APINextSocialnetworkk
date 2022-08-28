@@ -1,6 +1,6 @@
 import cors from "../cors";
 import { DataVideo } from "socialnetworkk/data/DataVideo";
-import { DTOVideo } from "socialnetworkk/entity/DTOVideo";
+
 
 
 export default async function (req, res) {
