@@ -1,12 +1,23 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+<<<<<<< HEAD
   "/api/albumimage/getsAlbumImages": "pages/api/albumimage/getsAlbumImages.js",
   "/api/albumimage/getAlbumImagebyUser": "pages/api/albumimage/getAlbumImagebyUser.js",
   "/api/albumimage/getAlbumImageByTitleUser": "pages/api/albumimage/getAlbumImageByTitleUser.js",
   "/api/albumvideo/albumvideo": "pages/api/albumvideo/albumvideo.js",
   "/api/albumvideo/getAlbumVideoByTitleUser": "pages/api/albumvideo/getAlbumVideoByTitleUser.js",
   "/api/albumimage/albumimage": "pages/api/albumimage/albumimage.js",
+=======
+  "/api/albumimage/albumimage": "pages/api/albumimage/albumimage.js",
+  "/api/albumimage/getAlbumImageByTitleUser": "pages/api/albumimage/getAlbumImageByTitleUser.js",
+  "/api/albumimage/getAlbumImagebyUser": "pages/api/albumimage/getAlbumImagebyUser.js",
+  "/api/albumimage/getsAlbumImages": "pages/api/albumimage/getsAlbumImages.js",
+  "/api/albumvideo/albumvideo": "pages/api/albumvideo/albumvideo.js",
+  "/api/albumvideo/getAlbumVideoByTitleUser": "pages/api/albumvideo/getAlbumVideoByTitleUser.js",
+  "/api/albumvideo/getAlbumVideobyUser": "pages/api/albumvideo/getAlbumVideobyUser.js",
+  "/api/albumvideo/getsAlbumVideos": "pages/api/albumvideo/getsAlbumVideos.js",
+>>>>>>> dev
   "/api/comment/commentimage": "pages/api/comment/commentimage.js",
   "/api/comment/commentpost": "pages/api/comment/commentpost.js",
   "/api/cors": "pages/api/cors.js",
