@@ -611,13 +611,13 @@ https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?piduser=
 
 #### Get Images Visibility By User Relation (GET)
 
-https://apin-ext-socialnetworkk.vercel.app/api/video/getImagesVisibilityByUserRelation?iduserlogin=1&iduser=2
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityByUserRelation?piduserlogin=1&piduser=2
 
-#### Get Videos Visibility By Friend User (GET)
+#### Get Images Visibility By Friend User (GET)
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
 
-#### Get Videos Visibility By Public User (GET)
+#### Get Images Visibility By Public User (GET)
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUser?iduser=1
 
