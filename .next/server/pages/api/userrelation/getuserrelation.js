@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
             const { piduser , pidfriend  } = req.query;
             let getUserRelation = await socialnetworkk_data_DataUserRelation__WEBPACK_IMPORTED_MODULE_0__.DataUserRelation.getUserRelation(piduser, pidfriend);
             if (getUserRelation === -1) {
-                throw new Error("The user name does not exists");
+                throw new Error("The user relation does not exists");
             }
             return res.status(200).send(getUserRelation);
         } catch (error) {
