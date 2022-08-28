@@ -9,8 +9,9 @@ export default async function (req, res) {
           {
             let arraydiffdate=[];
             const {pidalbum,iduser} = req.query;
-        
-            let array=await DataVideo.getVideosbyAlbumAndUser(pidalbum,iduser)
+            let idalbum=Number(pidalbum);
+            let niduser=Number(iduser);
+            let array=await DataVideo.getVideosbyAlbumAndUser(idalbum,niduser)
             for (const vid of array) {
                 vid.DiffDatePublishDateNow()
                 vid.showDiffDatePublishDateNow()

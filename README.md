@@ -474,13 +474,17 @@ Body-raw-JSON
   
 }
 
-#### Get Videos By Album  (GET)
+#### Get Videos By Album (GET)
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbum?pidalbum=2
 
-#### Get Videos By Album and User  (GET)
+#### Get Videos By Album and User (GET)
 
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbumAndUser?pidalbum=3&iduser=8
+
+#### Get Videos By Album and User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyFriendUser?iduser=3
 
 
 
