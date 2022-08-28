@@ -607,11 +607,11 @@ https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesByLikeUser?piduse
 
 #### Get Images Main Page (GET)
 
-https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?iduserlogin=1&country=USA
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?piduser=3&pcountry=USA
 
-#### Get Videos Visibility By User Relation (GET)
+#### Get Images Visibility By User Relation (GET)
 
-https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityByUserRelation?iduserlogin=1&iduser=2
+https://apin-ext-socialnetworkk.vercel.app/api/video/getImagesVisibilityByUserRelation?iduserlogin=1&iduser=2
 
 #### Get Videos Visibility By Friend User (GET)
 
