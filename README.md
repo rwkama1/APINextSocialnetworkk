@@ -7,10 +7,10 @@
 3. [AlbumImage](#ALBUMIMAGE)
 4. [AlbumVideo](#ALBUMVIDEO)
 5. [Video](#VIDEO)
-6. [Images](#Images)
-7. [Post](#Post)
-8. [PostVideoImage](#PostVideoImage)
-9. [Likes](#Likes)
+6. [Images](#IMAGES)
+7. [Post](#POST)
+8. [PostVideoImage](#POSTVIDEOIMAGES)
+9. [Likes](#LIKES)
 10. [Message](#Message)
 11. [Comment](#Comment)
 12. [SubComment](#SubComment)
@@ -611,15 +611,445 @@ https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?piduser=
 
 #### Get Images Visibility By User Relation (GET)
 
-https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityByUserRelation?piduserlogin=1&piduser=2
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityByUserRelation?pidloginuser=2&piduser=4
 
 #### Get Images Visibility By Friend User (GET)
 
-https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityFriendUser?piduser=2
 
 #### Get Images Visibility By Public User (GET)
 
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityPublicUser?piduser=2
+
+
+
+### POST
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+Body-raw-JSON
+{
+  "iduser":1,
+  "idalbum":2,
+  "title":"VideoTitle",
+  "description":"DescriptionVideo",
+  "urlvideo":"urlvideo"
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+
+Body-raw-JSON
+
+{
+  "idvideo":1
+}
+
+#### Update Title Description Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateTitleDescriptionVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "description":"Description",
+  "title":"VideoTitle"
+  
+}
+
+#### Update Visibility Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateVisibilityVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "visibility":"Friend"
+  
+}
+
+#### Get Videos By Album (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbum?pidalbum=2
+
+#### Get Videos By Album and User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbumAndUser?pidalbum=3&iduser=8
+
+#### Get Videos By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyFriendUser?iduser=3
+
+#### Get Videos (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideos
+
+#### Get Videos By Id User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyIdUser?iduser=2
+
+#### Get Videos By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosByLikeUser?iduserlogin=1
+
+#### Get Videos Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosMainPage?iduserlogin=1&country=USA
+
+#### Get Videos Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityByUserRelation?iduserlogin=1&iduser=2
+
+#### Get Videos Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
+
+#### Get Videos Visibility By Public User (GET)
+
 https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUser?iduser=1
+
+
+
+
+### IMAGES
+
+
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image
+Body-raw-JSON
+{
+  "iduser":1,
+  "idalbum":2,
+  "title":"ImageTitle",
+  "description":"DescriptionImage",
+  "urlimage":"urlimage"
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/image
+
+Body-raw-JSON
+
+{
+  "idimage":1
+}
+
+#### Update Title Description Image (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/updateTitleDescriptionPhoto
+
+Body-raw-JSON
+{
+  "idimage":2,
+  "description":"Description",
+  "title":"ImageTitle"
+  
+}
+
+#### Update Visibility Images (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/updateVisibilityPhoto
+
+Body-raw-JSON
+{
+  "idimage":2,
+  "visibility":"Friend"
+ 
+  
+}
+
+
+#### Get Images By Album (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesByAlbum?pidalbum=1
+
+#### Get Images By Album and User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyAlbumAndUser?pidalbum=1&piduser=1
+
+#### Get Images By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyFriendUser?piduser=3
+
+#### Get Images (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImages
+
+#### Get Images By Id User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesbyIdUser?piduser=1
+
+#### Get Images By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesByLikeUser?piduser=3
+
+#### Get Images Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesMainPage?piduser=3&pcountry=USA
+
+#### Get Images Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityByUserRelation?pidloginuser=2&piduser=4
+
+#### Get Images Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityFriendUser?piduser=2
+
+#### Get Images Visibility By Public User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/images/getImagesVisibilityPublicUser?piduser=2
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+Body-raw-JSON
+{
+  "iduser":1,
+  "idalbum":2,
+  "title":"VideoTitle",
+  "description":"DescriptionVideo",
+  "urlvideo":"urlvideo"
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/video
+
+Body-raw-JSON
+
+{
+  "idvideo":1
+}
+
+#### Update Title Description Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateTitleDescriptionVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "description":"Description",
+  "title":"VideoTitle"
+  
+}
+
+#### Update Visibility Video (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/updateVisibilityVideo
+
+Body-raw-JSON
+{
+  "idvideo":2,
+  "visibility":"Friend"
+  
+}
+
+#### Get Videos By Album (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbum?pidalbum=2
+
+#### Get Videos By Album and User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyAlbumAndUser?pidalbum=3&iduser=8
+
+#### Get Videos By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyFriendUser?iduser=3
+
+#### Get Videos (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideos
+
+#### Get Videos By Id User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosbyIdUser?iduser=2
+
+#### Get Videos By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosByLikeUser?iduserlogin=1
+
+#### Get Videos Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosMainPage?iduserlogin=1&country=USA
+
+#### Get Videos Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityByUserRelation?iduserlogin=1&iduser=2
+
+#### Get Videos Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityFriendUser?iduser=2
+
+#### Get Videos Visibility By Public User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/video/getVideosVisibilityPublicUser?iduser=1
+
+
+
+
+### POST
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/post?pid=2
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/post
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "title":"PostTitle",
+  "description":"DescriptionPost"
+
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/post
+
+Body-raw-JSON
+
+{
+  "idpost":1
+}
+
+#### Update Title Description Post (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/updateTitleDescriptionPost
+
+Body-raw-JSON
+{
+  "idpost":2,
+  "description":"Description",
+  "title":"PostTitle"
+  
+}
+
+#### Update Visibility Post (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/updateVisibilityPost
+
+Body-raw-JSON
+{
+  "idpost":2,
+  "visibility":"Friend"
+ 
+  
+}
+
+#### Get Posts (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPosts
+
+#### Get Post By User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostbyIdUser?pid=1
+
+#### Get Post By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostbyFriendUser?pid=3
+
+#### Get Post By Like User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostByLikeUser?pidlogin=3
+
+#### Get Post Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostMainPage?pidlogin=1&pcountry=USA
+
+#### Get Post Visibility By User Relation (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostVisibilityByUserRelation?pidlogin=1&piduser=3
+
+#### Get Post Visibility By Friend User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostVisibilityFriendUser?pid=2
+
+#### Get Post Visibility By Public User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/post/getPostVisibilityPublicUser?pid=3
+
+
+
+### POSTVIDEOIMAGES
+
+
+#### Get Image Post Video By Id Type (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoByIdAndType?id=1&type=V
+
+#### Get Image Post Video By Country User (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoCountryUser?country=USA
+
+#### Get Image Post Video Main Page (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoMainPage?iduserlogin=2&country=USA
+
+#### Get Image Post Video Visibility Public (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoPublic?pid=3
+
+
+### LIKES
+
+
+#### Like Image (POST)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likeimage
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idimage":2
+  
+}
+
+#### Delete Like Image (DELETE)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likeimage
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idimage":2
+  
+}
+
+
 
 
 
