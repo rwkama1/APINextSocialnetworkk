@@ -11,9 +11,9 @@
 7. [Post](#POST)
 8. [PostVideoImage](#POSTVIDEOIMAGES)
 9. [Likes](#LIKES)
-10. [Message](#Message)
-11. [Comment](#Comment)
-12. [SubComment](#SubComment)
+10. [Message](#MESSAGE)
+11. [Comment](#COMMENT)
+12. [SubComment](#SUBCOMMENT)
 
 ## Usage
 
@@ -1024,7 +1024,12 @@ https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoM
 https://apin-ext-socialnetworkk.vercel.app/api/postvideoimage/getPhotoPostVideoPublic?pid=3
 
 
+
+
+
 ### LIKES
+
+
 
 
 #### Like Image (POST)
@@ -1048,6 +1053,304 @@ Body-raw-JSON
   "idimage":2
   
 }
+
+
+
+#### Like Video (POST)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likevideo
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idvideo":2
+  
+}
+
+
+#### Delete Like Video (DELETE)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likevideo
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idvideo":2
+  
+}
+
+
+#### Like Post (POST)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likepost
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idpost":2
+  
+}
+
+#### Delete Like Post (DELETE)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likepost
+
+Body-raw-JSON
+{
+  "iduser":2,
+  "idpost":2
+  
+}
+
+
+#### Like Comment (POST)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likecomment
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idcomment":9
+  
+  
+}
+#### Delete Like Comment (DELETE)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likecomment
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idcomment":9
+  
+  
+}
+
+
+#### Like Sub Comment (POST)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likeslikesubcomment
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idsubcomment":9
+  
+  
+}
+#### Delete Like Sub Comment (DELETE)
+
+https://apin-ext-socialnetworkk.vercel.app/api/likes/likesubcomment
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idsubcomment":9
+  
+  
+}
+
+
+### MESSAGES
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/message?idmessage=1
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/message
+
+Body-raw-JSON
+{
+  "idusersender":1,
+  "iduserreceived":2,
+  "title":"Title",
+  "text":"TextMessage"
+
+  
+}
+
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/message
+
+Body-raw-JSON
+{
+  "idusersender":2,
+  "iduserreceived":1,
+  "idmessage":1
+ 
+}
+
+#### Mark All Messages Read User (PUT)
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/markallMessagesasreadbyUser
+
+Body-raw-JSON
+{
+  "iduserlogin":2
+}
+
+#### Get Message Mark Read (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/getMessageMarkRead?idmessage=9
+
+#### Get Message By User Received (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/getMessagesByUserReceived?iduserlogin=9
+
+#### Get Message By User Sender (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/getMessagesByUserSender?iduserlogin=9
+
+
+#### Get Search Name Message By User Received (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/message/getSearchNameMessagesByUserReceived?iduserlogin=1&name=User1
+
+
+
+### COMMENT 
+
+
+
+### COMMENT IMAGE
+
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentimage?idimage=5
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentimage
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idimage":2,
+  "text":"TextComment"
+}
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentimage
+
+Body-raw-JSON
+
+{
+   "iduser":1,
+  "idimage":2,
+  "idcomment":3
+}
+ 
+
+#### PUT
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentimage
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idimage":2,
+  "idcomment":29,
+  "text":"TextComment"
+}
+
+
+### COMMENT VIDEO
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo?idvideo=1
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idvideo":2,
+  "text":"TextComment"
+}
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+
+Body-raw-JSON
+
+{
+  "iduser":1,
+  "idvideo":2,
+  "idcomment":38
+}
+
+#### PUT
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idcomment":1,
+  "idvideo":2,
+  "text":"TextComment"
+}
+
+
+### COMMENT POST
+
+
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost?idpost=1
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idpost":2,
+  "text":"TextComment"
+}
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+
+Body-raw-JSON
+
+{
+   "iduser":1,
+  "idpost":2,
+  "idcomment":3
+}
+
+#### PUT
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idcomment":1,
+  "idvideo":2,
+  "text":"TextComment"
+}
+
 
 
 
