@@ -1359,43 +1359,55 @@ Body-raw-JSON
 
 #### GET
 
-https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment?idpost=1
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment?idcomment=14&iduser=1
 
 #### POST
 
-https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment
 
 Body-raw-JSON
 {
   "iduser":1,
-  "idpost":2,
-  "text":"TextComment"
+  "text":"SubCommentText",
+  "idcomment":14
 }
-
 #### DELETE
 
-https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment
 
 Body-raw-JSON
 
 {
-   "iduser":1,
-  "idpost":2,
-  "idcomment":3
+  "iduser":1,
+  "idsubcomment":31
 }
 
 #### PUT
 
-https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment
 
 Body-raw-JSON
 {
+  "idsubcomment":23,
+  "idcomment":14,
   "iduser":1,
-  "idcomment":1,
-  "idvideo":2,
-  "text":"TextComment"
+  "text":"SubTextComment"
 }
 
+#### Get If Exist Sub Comment of Comments Image (GET)
 
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/getIfExistsSubComentsOfCommentsImage?idimage=5
+
+#### Get If Exist Sub Comment of Comments Post (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/getIfExistsSubComentsOfCommentsPost?idpost=2
+
+#### Get If Exist Sub Comment of Comments Video (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/getIfExistsSubComentsOfCommentsVideo?idvideo=2
+
+#### Get Sub Comment By User Comment (GET)
+
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/getSubCommentsByUserComment?idcomment=14&iduser=1
 
 
