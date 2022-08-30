@@ -1353,8 +1353,48 @@ Body-raw-JSON
 
 
 
+### SUBCOMMENT 
 
 
+
+#### GET
+
+https://apin-ext-socialnetworkk.vercel.app/api/subcomment/subcomment?idpost=1
+
+#### POST
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idpost":2,
+  "text":"TextComment"
+}
+
+#### DELETE
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentpost
+
+Body-raw-JSON
+
+{
+   "iduser":1,
+  "idpost":2,
+  "idcomment":3
+}
+
+#### PUT
+
+https://apin-ext-socialnetworkk.vercel.app/api/comment/commentvideo
+
+Body-raw-JSON
+{
+  "iduser":1,
+  "idcomment":1,
+  "idvideo":2,
+  "text":"TextComment"
+}
 
 
 

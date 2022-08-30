@@ -89,13 +89,21 @@ export default async function (req, res) {
      try
      {
        let arraydiffdate=[];
-       const {idimage} = req.query;
-       let array=await DataCommentImage.getsCommentsImage(idimage);
-        for (const commentimg of array) {
-            commentimg.DiffDatePublishDateNow()
-            commentimg.showDiffDatePublishDateNow()
-            arraydiffdate.push(commentimg)
-        }
+       const {idcomment,iduser} = req.query;
+        let array=await DataSubComment.getSubCommentsByUserComment
+        (idcomment,iduser); 
+          for (const subcommentv of array) {
+       
+              subcommentv.DiffDatePublishDateNowComment()
+              subcommentv.showDiffDatePublishDateNowComment()
+                   
+              subcommentv.DiffDatePublishDateNowSubComment()
+              subcommentv.showDiffDatePublishDateNowSubComment()
+            
+                
+              arraydiffdate.push(subcommentv);
+               
+          }     
 
 
          return res.status(200).send(arraydiffdate);
